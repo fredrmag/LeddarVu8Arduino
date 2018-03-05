@@ -22,18 +22,18 @@
 #include <SPI.h>
 
 /** Activate SPI hardware. */
-void SPIDriver::activate() {
+void SPIdriver::activate() {
   SPI.beginTransaction(m_spiSettings);
 }
 /** Deactivate SPI hardware. */
-void SPIDriver::deactivate() {
+void SPIdriver::deactivate() {
   SPI.endTransaction();
 }
 /** Initialize the SPI bus.
  *
  * \param[in] csPin SD card chip select pin.
  */
-void SPIDriver::begin(uint8_t csPin) {
+void SPIdriver::begin(uint8_t csPin) {
   m_csPin = csPin;
   digitalWrite(csPin, HIGH);
   pinMode(csPin, OUTPUT);
@@ -43,7 +43,7 @@ void SPIDriver::begin(uint8_t csPin) {
  *
  * \return The byte.
  */
-uint8_t SPIDriver::receive() {
+uint8_t SPIdriver::receive() {
   return SPI.transfer(0XFF);
 }
 /** Receive multiple bytes.
@@ -53,7 +53,7 @@ uint8_t SPIDriver::receive() {
 *
 * \return Zero for no error or nonzero error code.
 */
-uint8_t SPIDriver::receive(uint8_t* buf, size_t n) {
+uint8_t SPIdriver::receive(uint8_t* buf, size_t n) {
   for (size_t i = 0; i < n; i++) {
     buf[i] = SPI.transfer(0XFF);
   }
@@ -63,7 +63,7 @@ uint8_t SPIDriver::receive(uint8_t* buf, size_t n) {
  *
  * \param[in] data Byte to send
  */
-void SPIDriver::send(uint8_t data) {
+void SPIdriver::send(uint8_t data) {
   SPI.transfer(data);
 }
 /** Send multiple bytes.
@@ -71,23 +71,23 @@ void SPIDriver::send(uint8_t data) {
  * \param[in] buf Buffer for data to be sent.
  * \param[in] n Number of bytes to send.
  */
-void SPIDriver::send(const uint8_t* buf, size_t n) {
+void SPIdriver::send(const uint8_t* buf, size_t n) {
   for (size_t i = 0; i < n; i++) {
     SPI.transfer(buf[i]);
   }
 }
 /** Set CS low. */
-void SPIDriver::select() {
+void SPIdriver::select() {
   digitalWrite(m_csPin, LOW);
 }
 /** Save SPISettings.
  *
  * \param[in] spiSettings SPI speed, mode, and byte order.
  */
-void SPIDriver::setSpiSettings(SPISettings spiSettings) {
+void SPIdriver::setSpiSettings(SPISettings spiSettings) {
   m_spiSettings = spiSettings;
 }
 /** Set CS high. */
-void SPIDriver::unselect() {
+void SPIdriver::unselect() {
   digitalWrite(m_csPin, HIGH);
 }

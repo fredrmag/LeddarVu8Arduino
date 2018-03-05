@@ -23,10 +23,10 @@
 
 #include <SPI.h>
 /**
-* \class SpiDriver
-* \brief SPI base driver.
+* \class SPIdriver
+* \brief SPIdriver class. Modified from Arduino SdCard Library.
 */
-class SPIDriver {
+class SPIdriver {
   public:
     /** Set SPI options for access to SD/SDHC cards.
     *
@@ -81,4 +81,4 @@ class SPIDriver {
    SPISettings m_spiSettings;
    uint8_t m_csPin;
 };
-#endif  // SdSpiBaseDriver_h
+#endif  // SPIdriver_h
