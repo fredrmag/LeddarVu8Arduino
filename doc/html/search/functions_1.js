@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['begin',['begin',['../class_leddar_vu8_arduino.html#a3b36ce1b385dd7e5bc37850cfb01d549',1,'LeddarVu8Arduino::begin()'],['../class_s_p_idriver.html#a79d2c359dcd94743ea0ef04c72c70b30',1,'SPIdriver::begin()']]]
+  ['checkcrc',['checkCRC',['../class_leddar_vu8_arduino.html#a475b76a6b90c31a0029b5d6d179302f7',1,'LeddarVu8Arduino']]],
+  ['combinebytes',['combineBytes',['../class_leddar_vu8_arduino.html#a8ee04f2e54927e69553f0415e2350f06',1,'LeddarVu8Arduino']]]
 ];

@@ -9,20 +9,91 @@
 */
 #include "Arduino.h"
 #include "LeddarVu8Arduino.h"
-#include "SPIdriver.h"
+#include "CRC16.h"
 
 //-----------------------------------------------------------------------------
-/** Initialize the LeddarVu8 sensor
-*  Modified from SdSpiCard from Arduino SdCard Library
-* \param[in] csPin LeddarTechVu8 chip select pin.
+/** Initialize the LeddarVu8 sensor.
+* \param[in] csPin - LeddarTechVu8 chip select pin.
+* \return Error code, or 0 if OK.
 */
-bool LeddarVu8Arduino::begin(uint8_t csPin){
-  // Initialize spi
+uint8_t LeddarVu8Arduino::begin(uint8_t csPin){
+  // Initialize SPI - modified from the Arduino SD-card library.
+  m_spiActive = false;
   spiBegin(csPin);
   spiSetSpiSettings(SPISettings(15000000, MSBFIRST, SPI_MODE0)); // 15 MHz
-  // TODO: Check the device name to see if we are connected, then return bool value.
+  spiStart();
+
+  // Check if we are connected to the LeddarVu8 sensor. The module type address
+  // returns 0x0D if we are connected to a LeddarVu8 sensor.
+
+  // send command
+  uint8_t *bufSend;
+  size_t size = 2;
+  bufSend = leddarCommand(READ, LEDDARVU8_MODULE_TYPE, size);
+
+  delay(1);
+
+  // Receive answer
+  uint8_t bufReceive[size+2];
+  spiReceive(bufReceive,size+2);
+  spiStop();
+
+// debug
+#if (LEDDAR_DEBUG == 1)
+  for (int j = 0; j < size+2; j++) {
+    Serial.print(bufReceive[j], HEX);
+  }
+  Serial.println();
+#endif
+
+  uint16_t moduleType = combineBytes(bufReceive,2);
+  if (moduleType != 0x0D){
+    return ERROR_LEDDAR_NO_RESPONSE;
+  }
+  if(!checkCRC(bufSend,bufReceive,size)) {
+    return ERROR_LEDDAR_CRC;
+  }
+  return 0;
+}
+
+/** Construct the full spi package and check the CRC16
+* \param[in] bufSend - header sent to the LeddarVu8
+* \param[in] bufReceive - data received from the LedderVu8, including the CRC16
+* \param[in] n - size of data package received
+* \param[out] boolean - true if CRC check is OK, false if fails
+*
+*/
+bool LeddarVu8Arduino::checkCRC(uint8_t* bufSend, uint8_t* bufReceive,size_t size) {
+  uint8_t spiPackage[6+size+2];
+  // Build the full package
+  // header
+  for (int j = 0; j < 6; j++) {
+    spiPackage[j] = bufSend[j];
+  }
+  // data
+  uint16_t i = 0;
+  for (int j = 6; j < 6 + size + 2; j++){
+    spiPackage[j] = bufReceive[i];
+    i++;
+  }
+
+#if (LEDDAR_DEBUG == 1)
+  // Let the CRC16 calculate the expected CRC16
+  // CRC16(spiPackage,6+size,false);
+  for (int j = 0; j < 6 + size + 2; j++) {
+    Serial.print(spiPackage[j], HEX);
+  }
+  Serial.println();
+#endif
+
+  // Check the CRC16
+  if(!CRC16(spiPackage,6+size,true)){
+    return false;
+  }
   return true;
 }
+
+
 /** Extract byte from a 32-bit number, given number and byte-place
 * \param[in] number - number to extract byte from
 * \param[in] place - byte place from right, starts at 0
@@ -35,10 +106,16 @@ byte LeddarVu8Arduino::extractByte(uint32_t number, int place) {
 * \param[in] opcode
 * \param[in] address
 * \param[in] dataSize
+* \return bufSend - data sent to the sensor
 *
 */
-void LeddarVu8Arduino::leddarCommand(uint8_t opcode, uint32_t address, size_t dataSize) {
-  uint8_t bufSend[6];
+uint8_t * LeddarVu8Arduino::leddarCommand(uint8_t opcode, uint32_t address, size_t dataSize) {
+  // select card
+  if (!m_spiActive) {
+    spiStart();
+  }
+
+  static uint8_t bufSend[6];
   // form message
   bufSend[0] = opcode;
   bufSend[1] = extractByte(address, 2);
@@ -46,102 +123,121 @@ void LeddarVu8Arduino::leddarCommand(uint8_t opcode, uint32_t address, size_t da
   bufSend[3] = extractByte(address, 0);
   bufSend[4] = extractByte(dataSize, 1);
   bufSend[5] = extractByte(dataSize, 0);
-  // TODO: Send through SPI protocol instead of writing to Serial
+
 #if (LEDDAR_DEBUG == 1)
   for (int j = 0; j < 6; j++) {
     Serial.print(bufSend[j], HEX);
   }
-  Serial.println();
+  //Serial.println();
 #endif
-  // spiSend(bufSend,sizeof(bufSend));
+  spiSend(bufSend,sizeof(bufSend));
+  return bufSend;
 }
-/** Combine bytes with least significant byte coming first.
-*   param[in]
+/** Converts an array of bytes with the least significant byte (LSB) coming
+*   first, to a 32-bit integer.
+*   \param[in] buf - array of bytes with LSB coming first.
+*   \param[in] n - size of the buffer.
+*   \return 32-bit integer with the result of the convertion.
 */
 uint32_t LeddarVu8Arduino::combineBytes(uint8_t* buf,size_t n) {
   uint32_t output = 0;
 
   for (int k = 0; k < n; k++) {
-    //Serial.println(buf[k],HEX);
     // Convert from byte to 32-bit int
     uint32_t tmp = buf[k];
     output = output | (uint32_t)(tmp << (k * 8));
-    //Serial.println((uint32_t)(tmp << (k * 8)), HEX);
   }
-  //Serial.println(output,HEX);
+
   return output;
 }
 
 /** Read the raw echo values from the Leddar Vu8 sensor, i.e., raw distances and
-* amplitudes.
-* param[out] rawEchoes -  array of 8 raw distances and 8 raw amplitude values
+*   amplitudes.
+*   \param[out] distances - array of 8 raw distances
+*   \param[out] amplitudes - array of 8 raw amplitudes
+*   \return 0 if no errors, and a nonzero value if an error occured.
 */
-void LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitudes){
+uint8_t LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitudes){
   size_t size = 96; // 8*12 bytes = 96
-  leddarCommand(READ,LEDDARVU8_START_OF_DETECTION_LIST_ARRAYS,size);
+  uint8_t *bufSend;
+  bufSend = leddarCommand(READ,LEDDARVU8_START_OF_DETECTION_LIST_ARRAYS,size);
   // delay 1 ms according to manual
   delay(1);
 
-  uint8_t bufReceive[size];
-  // Mock function to receive data until we get the sensor!
-  // TODO: change to spiReceive!
-  spiFakeReceive(bufReceive,size);
-  // Parse the received buffer
-  // The received buffer contains 8 segments that contains 12 bytes each
-  for (int i = 0; i < 8; i++){
-    uint8_t bufSegment[12];
-    for (int j = i * 12; j < (i + 1) * 12; j++) {
-      bufSegment[j - i * 12] = bufReceive[j];
-    }
-    // Extract the distance and amplitude from segment
-    uint8_t bufDistance[4];
-    for (int k = 0; k < 4; k++) {
-      bufDistance[k] = bufSegment[k];
-    }
-    uint8_t bufAmplitude[4];
-    int l = 0;
-    for (int k = 4; k < 8; k++) {
-      bufAmplitude[l] = bufSegment[k];
-      l++;
-    }
+  // Receive data
+  uint8_t bufReceive[size+2];
+  spiReceive(bufReceive,size+2);
+  #if (LEDDAR_DEBUG == 1)
+  for (int j = 0; j < size+2; j++) {
+    Serial.print(bufReceive[j], HEX);
+  }
+  Serial.println();
+  #endif
+  spiStop();
 
-    // Combine the bytes to a Number
-    distances[i] = combineBytes(bufDistance,4);
-    amplitudes[i] = combineBytes(bufAmplitude,4);
+  // Check the CRC16
+  if(!checkCRC(bufSend,bufReceive,size)){
+    return ERROR_LEDDAR_CRC;
+  } else {
+    // Parse the received buffer
+    // The received buffer contains 8 segments that contains 12 bytes each
+    for (int i = 0; i < 8; i++){
+      uint8_t bufSegment[12];
+      for (int j = i * 12; j < (i + 1) * 12; j++) {
+        bufSegment[j - i * 12] = bufReceive[j];
+      }
+      // Extract the distance and amplitude from segment
+      uint8_t bufDistance[4];
+      for (int k = 0; k < 4; k++) {
+        bufDistance[k] = bufSegment[k];
+      }
+      uint8_t bufAmplitude[4];
+      int l = 0;
+      for (int k = 4; k < 8; k++) {
+        bufAmplitude[l] = bufSegment[k];
+        l++;
+      }
 
-    #if (LEDDAR_DEBUG == 1)
-    for (int j = i * 12; j < (i + 1) * 12; j++) {
-      Serial.print(bufReceive[j], HEX);
+      // Combine the bytes to a 32-bit number
+      distances[i] = combineBytes(bufDistance,4);
+      amplitudes[i] = combineBytes(bufAmplitude,4);
+
+      #if (LEDDAR_DEBUG == 1)
+      for (int j = i * 12; j < (i + 1) * 12; j++) {
+        Serial.print(bufReceive[j], HEX);
+      }
+      Serial.print("\t");
+      Serial.print(distances[i], DEC);
+      Serial.print("\t");
+      Serial.println(amplitudes[i], DEC);
+      #endif
     }
-    Serial.print("\t");
-    Serial.print(distances[i], DEC);
-    Serial.print("\t");
-    Serial.println(amplitudes[i], DEC);
-    #endif
-
+    return 0;
   }
 }
 /** Read Echoes from the LeddarTech Vu8 sensor
-*  \param[out] distances - scaled distance - in meters
+*   \param[out] distances - scaled distance - in meters
 *   \param[out] amplitudes - scaled amplitudes - in ??
+*   \return nonzero value if error, and 0 if no error
 *
 */
-void LeddarVu8Arduino::readEchoes(float* distances, float* amplitudes){
-  // Convert to scaled distance and amplitudes
+uint8_t LeddarVu8Arduino::readEchoes(float* distances, float* amplitudes){
+  // Convert values received from readRawEchoes to scaled distance and amplitudes
   uint32_t rawDistance[8];
   uint32_t rawAmplitude[8];
-  readRawEchoes(rawDistance,rawAmplitude);
-  for (int i = 0; i<8; i++){
-    distances[i] = float(rawDistance[i])/float(DISTANCE_SCALE);
-    amplitudes[i] = float(rawAmplitude[i]);
-  }
-}
-
-// Mock SPI function until we get the device
-void LeddarVu8Arduino::spiFakeReceive(uint8_t* buf, size_t n){
-  uint8_t fakeSPI[96] = {0x87, 0x30, 0x00, 0x00, 0x6A, 0xF1, 0x42, 0x03, 0x07, 0x00, 0x01, 0x00, 0x53, 0x5B, 0x00, 0x00, 0x99, 0x29, 0x04, 0x02, 0x06, 0x00, 0x01, 0x00, 0xC6, 0xAE, 0x00, 0x00, 0xB9, 0x91, 0xAA, 0x01, 0x05, 0x00, 0x01, 0x00, 0xC5, 0x97, 0x00, 0x00, 0xF9, 0xEA, 0x46, 0x05, 0x04, 0x00, 0x01, 0x00, 0x3F, 0xC7, 0x00, 0x00, 0x7F, 0x74, 0xA9, 0x03, 0x03, 0x00, 0x01, 0x00, 0xE9, 0xEE, 0x00, 0x00, 0x1D, 0x78, 0x8E, 0x00, 0x02, 0x00, 0x01, 0x00, 0xB2, 0x6C, 0x00, 0x00, 0x0E, 0x38, 0xD1, 0x00, 0x01, 0x00, 0x01, 0x00, 0x0F, 0x2F, 0x00, 0x00, 0x6D, 0xBD, 0x15, 0x02, 0x00, 0x00, 0x01, 0x00};
-  for (size_t i = 0; i < n; i++) {
-    buf[i] = fakeSPI[i];
+  uint8_t check = readRawEchoes(rawDistance,rawAmplitude);
+  if(check >= 0){
+    for (int i = 0; i<8; i++){
+      distances[i] = float(rawDistance[i])/float(DISTANCE_SCALE);
+      amplitudes[i] = float(rawAmplitude[i]);
+    }
+    return 0;
+  } else { // CRC check failed, we return 0 in distance and amplitude
+    for (int i = 0; i<8; i++){
+      distances[i] = float(0);
+      amplitudes[i] = float(0);
+    }
+    return check;
   }
 }
 
@@ -169,3 +265,81 @@ void LeddarVu8Arduino::spiStop() {
   }
 }
 //------------------------------------------------------------------------------
+/** Initialize the SPI bus.
+*
+* \param[in] csPin - LeddarVu8 chip select pin.
+*/
+void LeddarVu8Arduino::spiBegin(uint8_t csPin){
+  m_csPin = csPin;
+  digitalWrite(csPin, HIGH);
+  pinMode(csPin, OUTPUT);
+  SPI.begin();
+}
+/** Save SPISettings.
+*
+* \param[in] spiSettings SPI speed, mode, and byte order.
+*/
+void LeddarVu8Arduino::spiSetSpiSettings(SPISettings spiSettings){
+  m_spiSettings = spiSettings;
+}
+/** Activate SPI hardware.
+*
+*/
+void LeddarVu8Arduino::spiActivate(){
+  SPI.beginTransaction(m_spiSettings);
+}
+/** Deactivate SPI hardware.
+*
+*/
+void LeddarVu8Arduino::spiDeactivate(){
+  SPI.endTransaction();
+}
+/** Receive a byte.
+*
+* \return The byte.
+*/
+uint8_t LeddarVu8Arduino::spiReceive(){
+  return SPI.transfer(0XFF);
+}
+/** Receive multiple bytes.
+*
+* \param[out] buf Buffer to receive the data.
+* \param[in] n Number of bytes to receive.
+*
+* \return Zero for no error or nonzero error code.
+*/
+uint8_t LeddarVu8Arduino::spiReceive(uint8_t* buf, size_t n){
+  for (size_t i = 0; i < n; i++) {
+    buf[i] = SPI.transfer(0XFF);
+  }
+  return 0;
+}
+/** Send a byte.
+*
+* \param[in] data Byte to send
+*/
+void LeddarVu8Arduino::spiSend(uint8_t data){
+  SPI.transfer(data);
+}
+/** Send multiple bytes.
+*
+* \param[in] buf Buffer for data to be sent.
+* \param[in] n Number of bytes to send.
+*/
+void LeddarVu8Arduino::spiSend(const uint8_t* buf, size_t n){
+  for (size_t i = 0; i < n; i++) {
+    SPI.transfer(buf[i]);
+  }
+}
+/** Set CS low.
+*
+*/
+void LeddarVu8Arduino::spiSelect(){
+  digitalWrite(m_csPin, LOW);
+}
+/** Set CS high.
+*
+*/
+void LeddarVu8Arduino::spiUnselect(){
+  digitalWrite(m_csPin, HIGH);
+}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leddarvu8arduino',['LeddarVu8Arduino',['../index.html',1,'']]]
+  ['leddarvu8arduino_20class',['LeddarVu8Arduino class',['../index.html',1,'']]]
 ];

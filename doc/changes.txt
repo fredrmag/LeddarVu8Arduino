@@ -1,2 +1,8 @@
-05 March 2018
-Version 0.0.1 - Segment reading functionality for the LeddarVu8 sensor. Mock data, as we don't have the sensor.
+05 March 2018 - Version 0.0.1
+- Segment reading functionality for the LeddarVu8 sensor. Mock data, as we don't have the sensor.
+11 April 2018 - Version 0.0.2
+- Sensor arrived.
+- Basic read functionality verified.
+- SPI communication is not through a driver, implemented into the LeddarVu8 Library. Something to
+  look into in the future.
+- Cyclic redundancy check (CRC) is verifying the messages received from the sensor.

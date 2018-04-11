@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['activate',['activate',['../class_s_p_idriver.html#a395df9bc53eca2074ad1e4463ebddb09',1,'SPIdriver']]]
+  ['begin',['begin',['../class_leddar_vu8_arduino.html#a46a864dae095a57d34b176dfd9abf545',1,'LeddarVu8Arduino']]]
 ];

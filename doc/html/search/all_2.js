@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['combinebytes',['combineBytes',['../class_leddar_vu8_arduino.html#a8ee04f2e54927e69553f0415e2350f06',1,'LeddarVu8Arduino']]]
+  ['extractbyte',['extractByte',['../class_leddar_vu8_arduino.html#a3a77c9d0af408c67032399ce0cb07345',1,'LeddarVu8Arduino']]]
 ];

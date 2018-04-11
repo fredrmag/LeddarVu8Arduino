@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deactivate',['deactivate',['../class_s_p_idriver.html#ae29356a240d7303011ad3fccb9c71ad8',1,'SPIdriver']]]
+  ['leddarcommand',['leddarCommand',['../class_leddar_vu8_arduino.html#aff7c737cddf3bd782e2562ac2a51b177',1,'LeddarVu8Arduino']]]
 ];

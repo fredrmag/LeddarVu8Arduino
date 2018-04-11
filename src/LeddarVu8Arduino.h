@@ -13,9 +13,8 @@
 #define LeddarVu8Arduino_h
 
 #include <SPI.h>
-#include "SPIDriver.h"
 
-#define LEDDAR_DEBUG 1
+#define LEDDAR_DEBUG 0
 
 #define DISTANCE_SCALE 65536
 
@@ -141,97 +140,132 @@
 // 1 = On detections
 // This register determines which data type will control the READY pin and manage the transaction mode.
 
+// Error codes
+#define ERROR_LEDDAR_CRC 1
+#define ERROR_LEDDAR_NO_RESPONSE 2
+
 
 /**
 * \class LeddarVu8Arduino
 * \brief LeddarVu8Arduino class
 */
 class LeddarVu8Arduino {
-  public:
-    /** Initialize the LeddarVu8 sensor
-    *  Modified from SdSpiCard from Arduino SdCard Library
-    * \param[in] csPin LeddarTechVu8 chip select pin.
-    */
-    bool begin(uint8_t csPin);
-    /** Extract byte from a 32-bit number, given number and byte-place
-    * \param[in] number - number to extract byte from
-    * \param[in] place - byte place from right, starts at 0
-    * \return byte - corresponding byte for given number and byte place
-    */
-    byte extractByte(uint32_t number, int place);
-    /** Send command to leddar sensor through SPI
-    * \param[in] opcode
-    * \param[in] address
-    * \param[in] dataSize
-    *
-    */
-    void LeddarVu8Arduino::leddarCommand(uint8_t opcode, uint32_t address, size_t dataSize);
-    /** Read Raw Echoes from the LeddarTech Vu8 sensor
-    * \param[out] distances - raw distances
-    * \param[out] amplitudes - raw amplitudes
-    *
-    */
-    void readRawEchoes(uint32_t* distances, uint32_t* amplitudes);
-    /** Read Echoes from the LeddarTech Vu8 sensor
-    *  \param[out] distances - scaled distance - in meters
-    *  \param[out] amplitudes - scaled amplitudes - in ??
-    *
-    */
-    void readEchoes(float* distances, float* amplitudes);
-    void spiFakeReceive(uint8_t* buf, size_t n);
-    /** Combines the bytes in a buffer to a 32-bit number
-    *  \param[in] buf - buffer with bytes
-    *  \param[in] n - size of buffer
-    *  \return combined bytes in uint32_t format
-    */
-    uint32_t combineBytes(uint8_t* buf,size_t n);
+public:
+  /** Initialize the LeddarVu8 sensor
+  *  Modified from SdSpiCard from Arduino SdCard Library
+  * \param[in] csPin LeddarTechVu8 chip select pin.
+  */
+  uint8_t begin(uint8_t csPin);
+  /** Extract byte from a 32-bit number, given number and byte-place
+  * \param[in] number - number to extract byte from
+  * \param[in] place - byte place from right, starts at 0
+  * \return byte - corresponding byte for given number and byte place
+  */
+  byte extractByte(uint32_t number, int place);
+  /** Send command to leddar sensor through SPI
+  * \param[in] opcode
+  * \param[in] address
+  * \param[in] dataSize
+  *
+  */
+  uint8_t * leddarCommand(uint8_t opcode, uint32_t address, size_t dataSize);
+  /** Read Raw Echoes from the LeddarTech Vu8 sensor
+  * \param[out] distances - raw distances
+  * \param[out] amplitudes - raw amplitudes
+  *
+  */
+  uint8_t readRawEchoes(uint32_t* distances, uint32_t* amplitudes);
+  /** Read Echoes from the LeddarTech Vu8 sensor
+  *  \param[out] distances - scaled distance - in meters
+  *  \param[out] amplitudes - scaled amplitudes - in ??
+  *  \return 0 if no error, or a non-zero error code
+  *
+  */
+  uint8_t readEchoes(float* distances, float* amplitudes);
+  /** Construct the full spi package and check the CRC16
+  * \param[in] bufSend - header sent to the LeddarVu8
+  * \param[in] bufReceive - data received from the LedderVu8, including the CRC16
+  * \param[in] n - size of data package received
+  * \param[out] boolean - true if CRC check is OK, false if fails
+  *
+  */
+  bool checkCRC(uint8_t* bufSend, uint8_t* bufReceive,size_t size);
+  /** Combines the bytes in a buffer to a 32-bit number
+  *  \param[in] buf - buffer with bytes
+  *  \param[in] n - size of buffer
+  *  \return combined bytes in uint32_t format
+  */
+  uint32_t combineBytes(uint8_t* buf,size_t n);
 
-    //--------------------------------------------------------------------------
-    // SPI
-    /** Make SPI ready for transfer
-    *
-    */
-    void spiStart();
-    /** Finish the SPI transfer
-    *
-    */
-    void spiStop();
-  private:
-    //--------------------------------------------------------------------------
-    // functions defined in SPIdriver.h
-    void spiBegin(uint8_t csPin) {
-     m_spiDriver->begin(csPin);
-    }
-    void spiSetSpiSettings(SPISettings settings) {
-     m_spiDriver->setSpiSettings(settings);
-    }
-    void spiActivate() {
-     m_spiDriver->activate();
-    }
-    void spiDeactivate() {
-     m_spiDriver->deactivate();
-    }
-    uint8_t spiReceive() {
-     return m_spiDriver->receive();
-    }
-    uint8_t spiReceive(uint8_t* buf, size_t n) {
-     return  m_spiDriver->receive(buf, n);
-    }
-    void spiSend(uint8_t data) {
-      m_spiDriver->send(data);
-    }
-    void spiSend(const uint8_t* buf, size_t n) {
-     m_spiDriver->send(buf, n);
-    }
-    void spiSelect() {
-     m_spiDriver->select();
-    }
-    void spiUnselect() {
-     m_spiDriver->unselect();
-    }
-    SPIdriver *m_spiDriver;
-    bool    m_spiActive;
+  //--------------------------------------------------------------------------
+  // SPI
+  /** Make SPI ready for transfer
+  *
+  */
+  void spiStart();
+  /** Finish the SPI transfer
+  *
+  */
+  void spiStop();
+private:
+  SPISettings m_spiSettings;
+  uint8_t 	m_csPin;
+  bool    	m_spiActive;
+  //--------------------------------------------------------------------------
+  // These functions are taken from the Arduino SD card library
+  /* Arduino SdCard Library
+  * Copyright (C) 2016 by William Greiman
+  * Modified by PSS-GEO, 2018
+  */
+  /** Initialize the SPI bus.
+  *
+  * \param[in] csPin - LeddarVu8 chip select pin.
+  */
+  void spiBegin(uint8_t csPin);
+  /** Save SPISettings.
+  *
+  * \param[in] spiSettings SPI speed, mode, and byte order.
+  */
+  void spiSetSpiSettings(SPISettings settings);
+  /** Activate SPI hardware.
+  *
+  */
+  void spiActivate();
+  /** Deactivate SPI hardware.
+  *
+  */
+  void spiDeactivate();
+  /** Receive a byte.
+  *
+  * \return The byte.
+  */
+  uint8_t spiReceive();
+  /** Receive multiple bytes.
+  *
+  * \param[out] buf Buffer to receive the data.
+  * \param[in] n Number of bytes to receive.
+  *
+  * \return Zero for no error or nonzero error code.
+  */
+  uint8_t spiReceive(uint8_t* buf, size_t n);
+  /** Send a byte.
+  *
+  * \param[in] data Byte to send
+  */
+  void spiSend(uint8_t data);
+  /** Send multiple bytes.
+  *
+  * \param[in] buf Buffer for data to be sent.
+  * \param[in] n Number of bytes to send.
+  */
+  void spiSend(const uint8_t* buf, size_t n);
+  /** Set CS low.
+  *
+  */
+  void spiSelect();
+  /** Set CS high.
+  *
+  */
+  void spiUnselect();
 };
-
-
 #endif

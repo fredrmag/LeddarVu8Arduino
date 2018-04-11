@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>LeddarVu8Arduino: LeddarVu8Arduino</title>
+<title>LeddarVu8Arduino: LeddarVu8Arduino class</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,12 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="class_leddar_vu8_arduino.html" title="LeddarVu8Arduino class. ">LeddarVu8Arduino</a> </div>  </div>
+<div class="title"><a class="el" href="class_leddar_vu8_arduino.html" title="LeddarVu8Arduino class. ">LeddarVu8Arduino</a> class </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h2>Introduction</h2>
 <p>Library for the <a href="https://leddartech.com/modules/leddarvu/">Leddar Vu8 LiDAR sensor</a> (using SPI) made by LeddarTech. User guide can be downloaded <a href="https://support.leddartech.com/file.php/181AGYWYHCZQY18023063C4C6/LeddarVu-and-Configurator-User-Guide.pdf">here</a>.</p>
-<p>Written by Fredrik Magnussen for PSS-GEO AS.</p>
-<p>The <a class="el" href="class_s_p_idriver.html" title="SPIdriver class. Modified from Arduino SdCard Library. ">SPIdriver</a> class is modified from the Arduino SD-card library <a href="https://github.com/greiman/SdFat">SdFat</a> written by William Greiman.</p>
+<p>Written by PSS-GEO AS.</p>
 <h2>Examples</h2>
 <ul>
 <li>LeddarVu8ArduinoEchoes - Example of readEchoes() function.</li>
@@ -76,9 +75,15 @@ $(function() {
 <h2>TODO</h2>
 <ul>
 <li>[x] Make mock library with very basic functionality.</li>
-<li>[ ] Test on real sensor.</li>
+<li>[x] Test on real sensor.</li>
+<li>[x] Cyclic redundancy verification.</li>
 <li>[ ] Add support for SPI write functions.</li>
-<li>[ ] Add support for other read functions when needed. </li>
+<li>[ ] Add support for other read functions when needed.</li>
+</ul>
+<h2>Credit - 3rd party software used</h2>
+<ul>
+<li>The SPI functions are modified from the Arduino SD-card library <a href="https://github.com/greiman/SdFat">SdFat</a> written by William Greiman, and is under the <a href="http://www.gnu.org/licenses/">GNU General Public License</a> as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</li>
+<li>The CRC16 checking (<a class="el" href="_c_r_c16_8h_source.html">CRC16.h</a>) is taken from the <a href="http://share.leddartech.com/ArduinoLeddar.zip">ArduinoLeddar</a> library written by LeddarTech, and is under the <a href="https://opensource.org/licenses/mit-license.html">MIT licence</a>. </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->

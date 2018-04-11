@@ -76,19 +76,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3b36ce1b385dd7e5bc37850cfb01d549"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3b36ce1b385dd7e5bc37850cfb01d549">begin</a> (uint8_t csPin)</td></tr>
-<tr class="separator:a3b36ce1b385dd7e5bc37850cfb01d549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a864dae095a57d34b176dfd9abf545"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a46a864dae095a57d34b176dfd9abf545">begin</a> (uint8_t csPin)</td></tr>
+<tr class="separator:a46a864dae095a57d34b176dfd9abf545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a77c9d0af408c67032399ce0cb07345"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3a77c9d0af408c67032399ce0cb07345">extractByte</a> (uint32_t number, int place)</td></tr>
 <tr class="separator:a3a77c9d0af408c67032399ce0cb07345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7cbb31b6e58f57e4f711c5b8e9dbd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ada7cbb31b6e58f57e4f711c5b8e9dbd4">leddarCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize)</td></tr>
-<tr class="separator:ada7cbb31b6e58f57e4f711c5b8e9dbd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97e5b866b3af92031e62d00252262780"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a97e5b866b3af92031e62d00252262780">readRawEchoes</a> (uint32_t *distances, uint32_t *amplitudes)</td></tr>
-<tr class="separator:a97e5b866b3af92031e62d00252262780"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6745b51a4f207dc47a80e2ef22e1ca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad6745b51a4f207dc47a80e2ef22e1ca9">readEchoes</a> (float *distances, float *amplitudes)</td></tr>
-<tr class="separator:ad6745b51a4f207dc47a80e2ef22e1ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a471ba0ebd52bcffdb0113473ec4ffe7b"><td class="memItemLeft" align="right" valign="top"><a id="a471ba0ebd52bcffdb0113473ec4ffe7b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (uint8_t *buf, size_t n)</td></tr>
-<tr class="separator:a471ba0ebd52bcffdb0113473ec4ffe7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7c737cddf3bd782e2562ac2a51b177"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aff7c737cddf3bd782e2562ac2a51b177">leddarCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize)</td></tr>
+<tr class="separator:aff7c737cddf3bd782e2562ac2a51b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183db757a93e4f0023ee131a93786ddf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a183db757a93e4f0023ee131a93786ddf">readRawEchoes</a> (uint32_t *distances, uint32_t *amplitudes)</td></tr>
+<tr class="separator:a183db757a93e4f0023ee131a93786ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5bb87fe4080c6dce4ce533ddc690399"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#af5bb87fe4080c6dce4ce533ddc690399">readEchoes</a> (float *distances, float *amplitudes)</td></tr>
+<tr class="separator:af5bb87fe4080c6dce4ce533ddc690399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b76a6b90c31a0029b5d6d179302f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a475b76a6b90c31a0029b5d6d179302f7">checkCRC</a> (uint8_t *bufSend, uint8_t *bufReceive, size_t size)</td></tr>
+<tr class="separator:a475b76a6b90c31a0029b5d6d179302f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee04f2e54927e69553f0415e2350f06"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a8ee04f2e54927e69553f0415e2350f06">combineBytes</a> (uint8_t *buf, size_t n)</td></tr>
 <tr class="separator:a8ee04f2e54927e69553f0415e2350f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7acc1c7227f3a7bb121997dfb7ace42b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7acc1c7227f3a7bb121997dfb7ace42b">spiStart</a> ()</td></tr>
@@ -99,14 +98,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_leddar_vu8_arduino.html" title="LeddarVu8Arduino class. ">LeddarVu8Arduino</a> class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3b36ce1b385dd7e5bc37850cfb01d549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b36ce1b385dd7e5bc37850cfb01d549">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="a46a864dae095a57d34b176dfd9abf545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a864dae095a57d34b176dfd9abf545">&#9670;&nbsp;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool LeddarVu8Arduino::begin </td>
+          <td class="memname">uint8_t LeddarVu8Arduino::begin </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>csPin</em></td><td>)</td>
@@ -116,7 +115,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
 </div><div class="memdoc">
 <p>Initialize the LeddarVu8 sensor Modified from SdSpiCard from Arduino SdCard Library </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">csPin</td><td>LeddarTechVu8 chip select pin. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">csPin</td><td>LeddarTechVu8 chip select pin.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Initialize the LeddarVu8 sensor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">csPin</td><td>- LeddarTechVu8 chip select pin. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code, or 0 if OK. </dd></dl>
+
+</div>
+</div>
+<a id="a475b76a6b90c31a0029b5d6d179302f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475b76a6b90c31a0029b5d6d179302f7">&#9670;&nbsp;</a></span>checkCRC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LeddarVu8Arduino::checkCRC </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bufSend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bufReceive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct the full spi package and check the CRC16 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufSend</td><td>- header sent to the LeddarVu8 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufReceive</td><td>- data received from the LedderVu8, including the CRC16 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>- size of data package received </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">boolean</td><td>- true if CRC check is OK, false if fails </td></tr>
   </table>
   </dd>
 </dl>
@@ -156,7 +205,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>combined bytes in uint32_t format</dd></dl>
-<p>Combine bytes with least significant byte coming first. param[in] </p>
+<p>Converts an array of bytes with the least significant byte (LSB) coming first, to a 32-bit integer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>- array of bytes with LSB coming first. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>- size of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>32-bit integer with the result of the convertion. </dd></dl>
 
 </div>
 </div>
@@ -196,14 +252,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
 
 </div>
 </div>
-<a id="ada7cbb31b6e58f57e4f711c5b8e9dbd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada7cbb31b6e58f57e4f711c5b8e9dbd4">&#9670;&nbsp;</a></span>leddarCommand()</h2>
+<a id="aff7c737cddf3bd782e2562ac2a51b177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7c737cddf3bd782e2562ac2a51b177">&#9670;&nbsp;</a></span>leddarCommand()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void LeddarVu8Arduino::leddarCommand </td>
+          <td class="memname">uint8_t * LeddarVu8Arduino::leddarCommand </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>opcode</em>, </td>
@@ -231,21 +287,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td>Send command to leddar sensor through SPI </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>bufSend - data sent to the sensor </dd></dl>
 
 </div>
 </div>
-<a id="ad6745b51a4f207dc47a80e2ef22e1ca9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6745b51a4f207dc47a80e2ef22e1ca9">&#9670;&nbsp;</a></span>readEchoes()</h2>
+<a id="af5bb87fe4080c6dce4ce533ddc690399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5bb87fe4080c6dce4ce533ddc690399">&#9670;&nbsp;</a></span>readEchoes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void LeddarVu8Arduino::readEchoes </td>
+          <td class="memname">uint8_t LeddarVu8Arduino::readEchoes </td>
           <td>(</td>
           <td class="paramtype">float *&#160;</td>
           <td class="paramname"><em>distances</em>, </td>
@@ -270,17 +330,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if no error, or a non-zero error code</dd></dl>
+<p>Read Echoes from the LeddarTech Vu8 sensor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">distances</td><td>- scaled distance - in meters </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">amplitudes</td><td>- scaled amplitudes - in ?? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero value if error, and 0 if no error </dd></dl>
 
 </div>
 </div>
-<a id="a97e5b866b3af92031e62d00252262780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97e5b866b3af92031e62d00252262780">&#9670;&nbsp;</a></span>readRawEchoes()</h2>
+<a id="a183db757a93e4f0023ee131a93786ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183db757a93e4f0023ee131a93786ddf">&#9670;&nbsp;</a></span>readRawEchoes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void LeddarVu8Arduino::readRawEchoes </td>
+          <td class="memname">uint8_t LeddarVu8Arduino::readRawEchoes </td>
           <td>(</td>
           <td class="paramtype">uint32_t *&#160;</td>
           <td class="paramname"><em>distances</em>, </td>
@@ -305,7 +374,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
   </table>
   </dd>
 </dl>
-<p>Read the raw echo values from the Leddar Vu8 sensor, i.e., raw distances and amplitudes. param[out] rawEchoes - array of 8 raw distances and 8 raw amplitude values </p>
+<p>Read the raw echo values from the Leddar Vu8 sensor, i.e., raw distances and amplitudes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">distances</td><td>- array of 8 raw distances </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">amplitudes</td><td>- array of 8 raw amplitudes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if no errors, and a nonzero value if an error occured. </dd></dl>
 
 </div>
 </div>
@@ -346,8 +422,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>spiFakeReceive</b> (u
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="_leddar_vu8_arduino_8h_source.html">LeddarVu8Arduino.h</a></li>
-<li>src/LeddarVu8Arduino.cpp</li>
+<li>C:/projects/PSS-Lidar-scanner/LeddarVu8Arduino/src/<a class="el" href="_leddar_vu8_arduino_8h_source.html">LeddarVu8Arduino.h</a></li>
+<li>C:/projects/PSS-Lidar-scanner/LeddarVu8Arduino/src/LeddarVu8Arduino.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
