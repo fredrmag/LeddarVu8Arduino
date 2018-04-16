@@ -6,3 +6,6 @@
 - SPI communication is not through a driver, implemented into the LeddarVu8 Library. Something to
   look into in the future.
 - Cyclic redundancy check (CRC) is verifying the messages received from the sensor.
+16 April 2018 - Version 0.0.3
+- Reading and writing support of all banks added
+- Updated with more examples

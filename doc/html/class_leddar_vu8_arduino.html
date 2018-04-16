@@ -62,6 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_leddar_vu8_arduino-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -80,8 +81,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a46a864dae095a57d34b176dfd9abf545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a77c9d0af408c67032399ce0cb07345"><td class="memItemLeft" align="right" valign="top">byte&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3a77c9d0af408c67032399ce0cb07345">extractByte</a> (uint32_t number, int place)</td></tr>
 <tr class="separator:a3a77c9d0af408c67032399ce0cb07345"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff7c737cddf3bd782e2562ac2a51b177"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aff7c737cddf3bd782e2562ac2a51b177">leddarCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize)</td></tr>
-<tr class="separator:aff7c737cddf3bd782e2562ac2a51b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6973bc2a95c7a4486c959f42ac279ce6"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a6973bc2a95c7a4486c959f42ac279ce6">readCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize)</td></tr>
+<tr class="separator:a6973bc2a95c7a4486c959f42ac279ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f33b81295968af3cbad7782354c930"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ae7f33b81295968af3cbad7782354c930">readLeddarCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize, uint8_t *buf)</td></tr>
+<tr class="separator:ae7f33b81295968af3cbad7782354c930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e8ab1e6f65aae0e1e5c55a8546828a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a25e8ab1e6f65aae0e1e5c55a8546828a">writeCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize)</td></tr>
+<tr class="separator:a25e8ab1e6f65aae0e1e5c55a8546828a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad504b89d55c3e9594f7159905dcbd815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad504b89d55c3e9594f7159905dcbd815">writeCommand</a> (uint8_t opcode, uint32_t address, size_t dataSize, uint8_t *buf)</td></tr>
+<tr class="separator:ad504b89d55c3e9594f7159905dcbd815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650f7b22d2e06784272054a2566d1e56"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a650f7b22d2e06784272054a2566d1e56">writeLeddarCommand</a> (uint32_t address, size_t dataSize, uint8_t *buf)</td></tr>
+<tr class="separator:a650f7b22d2e06784272054a2566d1e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a183db757a93e4f0023ee131a93786ddf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a183db757a93e4f0023ee131a93786ddf">readRawEchoes</a> (uint32_t *distances, uint32_t *amplitudes)</td></tr>
 <tr class="separator:a183db757a93e4f0023ee131a93786ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5bb87fe4080c6dce4ce533ddc690399"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#af5bb87fe4080c6dce4ce533ddc690399">readEchoes</a> (float *distances, float *amplitudes)</td></tr>
@@ -90,6 +99,204 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a475b76a6b90c31a0029b5d6d179302f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee04f2e54927e69553f0415e2350f06"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a8ee04f2e54927e69553f0415e2350f06">combineBytes</a> (uint8_t *buf, size_t n)</td></tr>
 <tr class="separator:a8ee04f2e54927e69553f0415e2350f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac470830ed0284da81a74e424e28062c3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ac470830ed0284da81a74e424e28062c3">getDeviceName</a> (char *deviceName)</td></tr>
+<tr class="separator:ac470830ed0284da81a74e424e28062c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354db7b0b8e1132d20f73772b768da2c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a354db7b0b8e1132d20f73772b768da2c">getAccumulationExponent</a> ()</td></tr>
+<tr class="separator:a354db7b0b8e1132d20f73772b768da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7b8772707297889faf411258d4a66d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a6d7b8772707297889faf411258d4a66d">setAccumulationExponent</a> (uint8_t AccumulationExponent)</td></tr>
+<tr class="separator:a6d7b8772707297889faf411258d4a66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057344c9f5c1d5ca765df9d6cfdacc1a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a057344c9f5c1d5ca765df9d6cfdacc1a">getOversamplingExponent</a> ()</td></tr>
+<tr class="separator:a057344c9f5c1d5ca765df9d6cfdacc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3045cbdf6d639533cde8902058af7b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a0c3045cbdf6d639533cde8902058af7b">setOversamplingExponent</a> (uint8_t oversamplingExponent)</td></tr>
+<tr class="separator:a0c3045cbdf6d639533cde8902058af7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447a4421b7bb080f0771c347cb8e67ca"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a447a4421b7bb080f0771c347cb8e67ca">getBasePointSample</a> ()</td></tr>
+<tr class="separator:a447a4421b7bb080f0771c347cb8e67ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0adfa1be10c0bf021c4b6b70ea7213"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aed0adfa1be10c0bf021c4b6b70ea7213">setBasePointSample</a> (uint8_t basePointSample)</td></tr>
+<tr class="separator:aed0adfa1be10c0bf021c4b6b70ea7213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cd2a97353b0d013a8267385ff88efb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a80cd2a97353b0d013a8267385ff88efb">getSegmentEnabled</a> ()</td></tr>
+<tr class="separator:a80cd2a97353b0d013a8267385ff88efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c4e8fa5eabc9a5e6eda0409cba219c1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a9c4e8fa5eabc9a5e6eda0409cba219c1">setSegmentEnabled</a> (uint32_t segmentEnabled)</td></tr>
+<tr class="separator:a9c4e8fa5eabc9a5e6eda0409cba219c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae5210999be827d8cb1036a55d89122"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#afae5210999be827d8cb1036a55d89122">getReferencePulseRate</a> ()</td></tr>
+<tr class="separator:afae5210999be827d8cb1036a55d89122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749c209540c585d31d24eb04cfc05d68"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a749c209540c585d31d24eb04cfc05d68">setReferencePulseRate</a> (uint32_t referencePulseRate)</td></tr>
+<tr class="separator:a749c209540c585d31d24eb04cfc05d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab773113dddc141f8e8dc1dbe7b9aa99f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ab773113dddc141f8e8dc1dbe7b9aa99f">getYaw</a> ()</td></tr>
+<tr class="separator:ab773113dddc141f8e8dc1dbe7b9aa99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d856440ebee074bc8011ff953c92123"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7d856440ebee074bc8011ff953c92123">setYaw</a> (float yaw)</td></tr>
+<tr class="separator:a7d856440ebee074bc8011ff953c92123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5c8f97cbc61a0362c3f39ebe0839d0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a8d5c8f97cbc61a0362c3f39ebe0839d0">getPitch</a> ()</td></tr>
+<tr class="separator:a8d5c8f97cbc61a0362c3f39ebe0839d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32cccc4ee9358c34f03d4b3f7bd193a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aa32cccc4ee9358c34f03d4b3f7bd193a">setPitch</a> (float pitch)</td></tr>
+<tr class="separator:aa32cccc4ee9358c34f03d4b3f7bd193a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6b51b15e993a8f3a7eb93a99986571"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2b6b51b15e993a8f3a7eb93a99986571">getRoll</a> ()</td></tr>
+<tr class="separator:a2b6b51b15e993a8f3a7eb93a99986571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ace17be911e8df701c167de18faecf"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ae3ace17be911e8df701c167de18faecf">setRoll</a> (float roll)</td></tr>
+<tr class="separator:ae3ace17be911e8df701c167de18faecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d199d7c28f29122d74c347d7d94a19f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a5d199d7c28f29122d74c347d7d94a19f">getXPos</a> ()</td></tr>
+<tr class="separator:a5d199d7c28f29122d74c347d7d94a19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340e039089e9a4acfcad47c77228b8fe"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a340e039089e9a4acfcad47c77228b8fe">setXPos</a> (float xPos)</td></tr>
+<tr class="separator:a340e039089e9a4acfcad47c77228b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117ddd5288c56d978a5f447cbfa9488d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a117ddd5288c56d978a5f447cbfa9488d">getYPos</a> ()</td></tr>
+<tr class="separator:a117ddd5288c56d978a5f447cbfa9488d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b061682d89db3a8e6e6aece2d692760"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1b061682d89db3a8e6e6aece2d692760">setYPos</a> (float yPos)</td></tr>
+<tr class="separator:a1b061682d89db3a8e6e6aece2d692760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a7a7a135b07d5e254f107ee1342465"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ac1a7a7a135b07d5e254f107ee1342465">getZPos</a> ()</td></tr>
+<tr class="separator:ac1a7a7a135b07d5e254f107ee1342465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386d4f26cfff4d2b868e93a8daf82d6b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a386d4f26cfff4d2b868e93a8daf82d6b">setZPos</a> (float zPos)</td></tr>
+<tr class="separator:a386d4f26cfff4d2b868e93a8daf82d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e019df673782385a5bab1157bf4acb"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a85e019df673782385a5bab1157bf4acb">getPrecision</a> ()</td></tr>
+<tr class="separator:a85e019df673782385a5bab1157bf4acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54183863ac84acb45b7546a8a6be72aa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a54183863ac84acb45b7546a8a6be72aa">setPrecision</a> (int8_t precision)</td></tr>
+<tr class="separator:a54183863ac84acb45b7546a8a6be72aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0446e7db9a351d8d944f855ca6465b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aaf0446e7db9a351d8d944f855ca6465b">getPrecisionEnabled</a> ()</td></tr>
+<tr class="separator:aaf0446e7db9a351d8d944f855ca6465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f63b1fc97470c8ef98df7511a8e1eae"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3f63b1fc97470c8ef98df7511a8e1eae">setPrecisionEnabled</a> (uint8_t precisionEnabled)</td></tr>
+<tr class="separator:a3f63b1fc97470c8ef98df7511a8e1eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171b78ebd4b3a611fbd03394974bc371"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a171b78ebd4b3a611fbd03394974bc371">getSaturationCompensationEnabled</a> ()</td></tr>
+<tr class="separator:a171b78ebd4b3a611fbd03394974bc371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c855db276eb5e488433f12ec966f92"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a03c855db276eb5e488433f12ec966f92">setSaturationCompensationEnabled</a> (uint8_t saturationCompensationEnabled)</td></tr>
+<tr class="separator:a03c855db276eb5e488433f12ec966f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021b94893c21df6030aec5946dfeeb1b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a021b94893c21df6030aec5946dfeeb1b">getOvershootManagementEnabled</a> ()</td></tr>
+<tr class="separator:a021b94893c21df6030aec5946dfeeb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c44e69b45d1af61c6a57570acb9da0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a65c44e69b45d1af61c6a57570acb9da0">setOvershootManagementEnabled</a> (uint8_t overshootManagementEnabled)</td></tr>
+<tr class="separator:a65c44e69b45d1af61c6a57570acb9da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055c4c866cb668628e98b9082dcadca0"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a055c4c866cb668628e98b9082dcadca0">getSensitivity</a> ()</td></tr>
+<tr class="separator:a055c4c866cb668628e98b9082dcadca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c53364569b1f081e9e51bc04de5de8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a52c53364569b1f081e9e51bc04de5de8">setSensitivity</a> (int32_t sensitivity)</td></tr>
+<tr class="separator:a52c53364569b1f081e9e51bc04de5de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31b37c2121931b90d13de5d8c56584a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad31b37c2121931b90d13de5d8c56584a">getLightSourcePower</a> ()</td></tr>
+<tr class="separator:ad31b37c2121931b90d13de5d8c56584a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b8049e422755346315f02e5b6f2a05"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a32b8049e422755346315f02e5b6f2a05">setLightSourcePower</a> (uint8_t lightSourcePower)</td></tr>
+<tr class="separator:a32b8049e422755346315f02e5b6f2a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cf8a34c74415727e7e44b1593687d2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a88cf8a34c74415727e7e44b1593687d2">getAutoLightSourcePowerEnabled</a> ()</td></tr>
+<tr class="separator:a88cf8a34c74415727e7e44b1593687d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12796cf8bdbde8b153ffd0cf9b5cf4f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ab12796cf8bdbde8b153ffd0cf9b5cf4f">setAutoLightSourcePowerEnabled</a> (uint8_t autoLightSourcePowerEnabled)</td></tr>
+<tr class="separator:ab12796cf8bdbde8b153ffd0cf9b5cf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc353817098e8e9eface5dd3c5c481dc"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#afc353817098e8e9eface5dd3c5c481dc">getAutoFrameAverage</a> ()</td></tr>
+<tr class="separator:afc353817098e8e9eface5dd3c5c481dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263313615f3e193260d73a0b14562816"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a263313615f3e193260d73a0b14562816">setAutoFrameAverage</a> (uint16_t autoFrameAverage)</td></tr>
+<tr class="separator:a263313615f3e193260d73a0b14562816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79399dd7dc8ab5b2fa88f2a8c5f31138"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a79399dd7dc8ab5b2fa88f2a8c5f31138">getAutoDetectionsAverage</a> ()</td></tr>
+<tr class="separator:a79399dd7dc8ab5b2fa88f2a8c5f31138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0293841b3591c0b6a3d1b4818eebd2bc"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a0293841b3591c0b6a3d1b4818eebd2bc">setAutoDetectionsAverage</a> (uint8_t autoDetectionsAverage)</td></tr>
+<tr class="separator:a0293841b3591c0b6a3d1b4818eebd2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca5145601e968a2a373f2c644ed9034"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2ca5145601e968a2a373f2c644ed9034">getObjectDemergingEnabled</a> ()</td></tr>
+<tr class="separator:a2ca5145601e968a2a373f2c644ed9034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46545cbb6ad699db9cd3ff862a03e5a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aa46545cbb6ad699db9cd3ff862a03e5a">setObjectDemergingEnabled</a> (uint8_t objectDemergingEnabled)</td></tr>
+<tr class="separator:aa46545cbb6ad699db9cd3ff862a03e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb5b33fbe845b7e82121951b6834196"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a8eb5b33fbe845b7e82121951b6834196">getStaticNoiseRemovalEnabled</a> ()</td></tr>
+<tr class="separator:a8eb5b33fbe845b7e82121951b6834196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea534f5014f7928bd0c37e8fcac3d8f5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aea534f5014f7928bd0c37e8fcac3d8f5">setStaticNoiseRemovalEnabled</a> (uint8_t staticNoiseRemovalEnabled)</td></tr>
+<tr class="separator:aea534f5014f7928bd0c37e8fcac3d8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d815e85051b22e10e542e11376ab34b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2d815e85051b22e10e542e11376ab34b">getModulePartNumber</a> (char *modulePartNumber)</td></tr>
+<tr class="separator:a2d815e85051b22e10e542e11376ab34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49db3eb058d915ab2dd2bf38cbad48e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aa49db3eb058d915ab2dd2bf38cbad48e">getSoftwarePartNumber</a> (char *softwarePartNumber)</td></tr>
+<tr class="separator:aa49db3eb058d915ab2dd2bf38cbad48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed9e20e9f7a01108aafaf26c7c40f05"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7ed9e20e9f7a01108aafaf26c7c40f05">getModuleSerialNumber</a> (char *moduleSerialNumber)</td></tr>
+<tr class="separator:a7ed9e20e9f7a01108aafaf26c7c40f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d19f547629bd35f3b3acb516d421a6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad3d19f547629bd35f3b3acb516d421a6">getManufacturerName</a> (char *manufacturerName)</td></tr>
+<tr class="separator:ad3d19f547629bd35f3b3acb516d421a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247ea6b5639fbc08293ba564aa465597"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a247ea6b5639fbc08293ba564aa465597">getGroupIdentificationNumber</a> (char *groupIdentificationNumber)</td></tr>
+<tr class="separator:a247ea6b5639fbc08293ba564aa465597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf09dc093856d0f9f7d73d9c98d0d89"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a9cf09dc093856d0f9f7d73d9c98d0d89">getBuildDate</a> (char *buildDate)</td></tr>
+<tr class="separator:a9cf09dc093856d0f9f7d73d9c98d0d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde484649858028c97597b463db82768"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#adde484649858028c97597b463db82768">getFirmwareVersion</a> (char *firmwareVersion)</td></tr>
+<tr class="separator:adde484649858028c97597b463db82768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387e2f7f068336fe79fbdf3503919b34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a387e2f7f068336fe79fbdf3503919b34">getBootloaderVersion</a> (char *bootloaderVersion)</td></tr>
+<tr class="separator:a387e2f7f068336fe79fbdf3503919b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13ae04b1feb69a2840c1941680212b6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aa13ae04b1feb69a2840c1941680212b6">getAsicVersion</a> (char *asicVersion)</td></tr>
+<tr class="separator:aa13ae04b1feb69a2840c1941680212b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a676bf7442c02b3fe5f29de40d4890"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a21a676bf7442c02b3fe5f29de40d4890">getFgpaVersion</a> (char *fgpaVersion)</td></tr>
+<tr class="separator:a21a676bf7442c02b3fe5f29de40d4890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa28d0d352ba2cf240938f831ff9e567"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aaa28d0d352ba2cf240938f831ff9e567">getModuleType</a> ()</td></tr>
+<tr class="separator:aaa28d0d352ba2cf240938f831ff9e567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672be85bfa252101ad239a5a267f7649"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a672be85bfa252101ad239a5a267f7649">getAccumulationExponentMin</a> ()</td></tr>
+<tr class="separator:a672be85bfa252101ad239a5a267f7649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4df0e4c31d228f7bb8dbd1bf549697"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3a4df0e4c31d228f7bb8dbd1bf549697">getAccumulationExponentMax</a> ()</td></tr>
+<tr class="separator:a3a4df0e4c31d228f7bb8dbd1bf549697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223588b0a3a9bd07b37db354a3aeb11f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a223588b0a3a9bd07b37db354a3aeb11f">getOversamplingExponentMin</a> ()</td></tr>
+<tr class="separator:a223588b0a3a9bd07b37db354a3aeb11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb99afdf351d210d135e099adc444c4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1fb99afdf351d210d135e099adc444c4">getOversamplingExponentMax</a> ()</td></tr>
+<tr class="separator:a1fb99afdf351d210d135e099adc444c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9895bbc8e79e2e533ee14b25ac3a2b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2f9895bbc8e79e2e533ee14b25ac3a2b">getBasePointSampleMin</a> ()</td></tr>
+<tr class="separator:a2f9895bbc8e79e2e533ee14b25ac3a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0d57d498e4215cccdcdb7d80d5100a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2f0d57d498e4215cccdcdb7d80d5100a">getBasePointSampleMax</a> ()</td></tr>
+<tr class="separator:a2f0d57d498e4215cccdcdb7d80d5100a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5465a022e19e1f9f3e0b98285d1f41ea"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a5465a022e19e1f9f3e0b98285d1f41ea">getNumberOfVerticalSegments</a> ()</td></tr>
+<tr class="separator:a5465a022e19e1f9f3e0b98285d1f41ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecce629b8b7ac1da7aad4fd26425180f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aecce629b8b7ac1da7aad4fd26425180f">getNumberOfHorizontalSegments</a> ()</td></tr>
+<tr class="separator:aecce629b8b7ac1da7aad4fd26425180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0064403f29e42e3d1a060a9d8014af"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2a0064403f29e42e3d1a060a9d8014af">getNumberOfReferenceSegments</a> ()</td></tr>
+<tr class="separator:a2a0064403f29e42e3d1a060a9d8014af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a217af1b8f2c427e346205af981839"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a31a217af1b8f2c427e346205af981839">getBasePointSampleDistance</a> ()</td></tr>
+<tr class="separator:a31a217af1b8f2c427e346205af981839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77684e331227b15352e8512c957de9c7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a77684e331227b15352e8512c957de9c7">getReferenceSegmentMask</a> ()</td></tr>
+<tr class="separator:a77684e331227b15352e8512c957de9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4db40610cc36b73c8e73dd95cfb57de"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ab4db40610cc36b73c8e73dd95cfb57de">getNumberOfSamplesMax</a> ()</td></tr>
+<tr class="separator:ab4db40610cc36b73c8e73dd95cfb57de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebe5fd4b3b87af138dedcf6056c55ba"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#abebe5fd4b3b87af138dedcf6056c55ba">getClockFrequency</a> ()</td></tr>
+<tr class="separator:abebe5fd4b3b87af138dedcf6056c55ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26322a2f6271f60f47a7707117d68b1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aa26322a2f6271f60f47a7707117d68b1">getMaxNumberOfDetectionsPerSegment</a> ()</td></tr>
+<tr class="separator:aa26322a2f6271f60f47a7707117d68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d631365ea809dd906b1fcb231f28fe2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1d631365ea809dd906b1fcb231f28fe2">getDistanceScale</a> ()</td></tr>
+<tr class="separator:a1d631365ea809dd906b1fcb231f28fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1adaeaef49f5b46c80385602d779894"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ac1adaeaef49f5b46c80385602d779894">getRawAmplitudeScaleBit</a> ()</td></tr>
+<tr class="separator:ac1adaeaef49f5b46c80385602d779894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed4085062fea81ebc3f7d6713d435d8"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a6ed4085062fea81ebc3f7d6713d435d8">getRawAmplitudeScale</a> ()</td></tr>
+<tr class="separator:a6ed4085062fea81ebc3f7d6713d435d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c2f8c1f7f8e9ec53ec7d9f12bb287b"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ab8c2f8c1f7f8e9ec53ec7d9f12bb287b">getPrecisionMin</a> ()</td></tr>
+<tr class="separator:ab8c2f8c1f7f8e9ec53ec7d9f12bb287b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957f3f55345a275c5ad940d941be9aa9"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a957f3f55345a275c5ad940d941be9aa9">getPrecisionMax</a> ()</td></tr>
+<tr class="separator:a957f3f55345a275c5ad940d941be9aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8b3d6a57df71db65c9f7477d85f3cd"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1e8b3d6a57df71db65c9f7477d85f3cd">getSensitivityMin</a> ()</td></tr>
+<tr class="separator:a1e8b3d6a57df71db65c9f7477d85f3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8a9a05f118dc85e4ef692b9c893fea"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1d8a9a05f118dc85e4ef692b9c893fea">getSensitivityMax</a> ()</td></tr>
+<tr class="separator:a1d8a9a05f118dc85e4ef692b9c893fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad5e9f05436e25fb815e80eb35fc87a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#adad5e9f05436e25fb815e80eb35fc87a">getCurrentLightSourcePowerCount</a> ()</td></tr>
+<tr class="separator:adad5e9f05436e25fb815e80eb35fc87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1755b397ae9a206df21369213593f85"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad1755b397ae9a206df21369213593f85">getAutoFrameAverageMin</a> ()</td></tr>
+<tr class="separator:ad1755b397ae9a206df21369213593f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020101f9addf169e232cf77783df71e0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a020101f9addf169e232cf77783df71e0">getAutoFrameAverageMax</a> ()</td></tr>
+<tr class="separator:a020101f9addf169e232cf77783df71e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac68548031418bb3e07c2e72eeb937c62"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ac68548031418bb3e07c2e72eeb937c62">getAutoLightSourcePowerPercentMin</a> ()</td></tr>
+<tr class="separator:ac68548031418bb3e07c2e72eeb937c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a01e36301fd7052bbcc56013e4baa8f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2a01e36301fd7052bbcc56013e4baa8f">getAutoLightSourcePowerPercentMax</a> ()</td></tr>
+<tr class="separator:a2a01e36301fd7052bbcc56013e4baa8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c775e240e463b6baef2a9a760fccf69"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a6c775e240e463b6baef2a9a760fccf69">getAutoDetectionsAverageMin</a> ()</td></tr>
+<tr class="separator:a6c775e240e463b6baef2a9a760fccf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27d41da2455dcaf7a64b1eeacf93f91"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#af27d41da2455dcaf7a64b1eeacf93f91">getAutoDetectionsAverageMax</a> ()</td></tr>
+<tr class="separator:af27d41da2455dcaf7a64b1eeacf93f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aefc41629372b3a924e1831e43cb485"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7aefc41629372b3a924e1831e43cb485">getStaticNoiseCalibrationSource</a> ()</td></tr>
+<tr class="separator:a7aefc41629372b3a924e1831e43cb485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb5c99bbdfa0f321250326e749ac80a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a6cb5c99bbdfa0f321250326e749ac80a">getCPUloadScale</a> ()</td></tr>
+<tr class="separator:a6cb5c99bbdfa0f321250326e749ac80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad04aba2e6f665ba3a37101501582e10a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad04aba2e6f665ba3a37101501582e10a">getTemperatureScale</a> ()</td></tr>
+<tr class="separator:ad04aba2e6f665ba3a37101501582e10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3425930fd4b07b9fa8b5231e2b011ad"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ac3425930fd4b07b9fa8b5231e2b011ad">getTimestamp</a> ()</td></tr>
+<tr class="separator:ac3425930fd4b07b9fa8b5231e2b011ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517fded4e74bd0c0cff696c0c63d8481"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a517fded4e74bd0c0cff696c0c63d8481">getNumberOfDetections</a> ()</td></tr>
+<tr class="separator:a517fded4e74bd0c0cff696c0c63d8481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5535f674db23001635debea855c8eeb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ad5535f674db23001635debea855c8eeb">getCurrentPercentageOfLightSourcePower</a> ()</td></tr>
+<tr class="separator:ad5535f674db23001635debea855c8eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a236a0ff817312f3a83f81389bb0380b6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a236a0ff817312f3a83f81389bb0380b6">getAcquisitionOptions</a> ()</td></tr>
+<tr class="separator:a236a0ff817312f3a83f81389bb0380b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790ca662557a4a30d4dec99852819ce0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a790ca662557a4a30d4dec99852819ce0">getSecureTransactionEnabledFlags</a> ()</td></tr>
+<tr class="separator:a790ca662557a4a30d4dec99852819ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fbe942bf0709e63d74da1cb5e8bd10"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#ab3fbe942bf0709e63d74da1cb5e8bd10">setSecureTransactionEnabledFlags</a> (uint8_t secureTransactionEnabledFlags)</td></tr>
+<tr class="separator:ab3fbe942bf0709e63d74da1cb5e8bd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccb712042592f9e5686d62461b8307a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a8ccb712042592f9e5686d62461b8307a">getTransactionMode</a> ()</td></tr>
+<tr class="separator:a8ccb712042592f9e5686d62461b8307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cddf4581c93582b6eb99eb1ae63ed4d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a2cddf4581c93582b6eb99eb1ae63ed4d">setTransactionMode</a> (uint8_t transactionMode)</td></tr>
+<tr class="separator:a2cddf4581c93582b6eb99eb1ae63ed4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6433b3d53d01c8d34a835c7f25aa53"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7e6433b3d53d01c8d34a835c7f25aa53">getCRClastTransaction</a> ()</td></tr>
+<tr class="separator:a7e6433b3d53d01c8d34a835c7f25aa53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1834b2b50ce89c717a71b066d16f3cd8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a1834b2b50ce89c717a71b066d16f3cd8">getBitFieldInformationOfLastTransaction</a> ()</td></tr>
+<tr class="separator:a1834b2b50ce89c717a71b066d16f3cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8cf3059386e0518aeb5731e0b7347c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a3c8cf3059386e0518aeb5731e0b7347c">getDataTransactionControlSource</a> ()</td></tr>
+<tr class="separator:a3c8cf3059386e0518aeb5731e0b7347c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc9d37f093300850523c533967b89ba"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#aacc9d37f093300850523c533967b89ba">setDataTransactionControlSource</a> (uint8_t dataTransactionControlSource)</td></tr>
+<tr class="separator:aacc9d37f093300850523c533967b89ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7acc1c7227f3a7bb121997dfb7ace42b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a7acc1c7227f3a7bb121997dfb7ace42b">spiStart</a> ()</td></tr>
 <tr class="separator:a7acc1c7227f3a7bb121997dfb7ace42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63ac2511b7ed73db8ea34fdf06e48d7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_leddar_vu8_arduino.html#a63ac2511b7ed73db8ea34fdf06e48d7a">spiStop</a> ()</td></tr>
@@ -113,19 +320,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialize the LeddarVu8 sensor Modified from SdSpiCard from Arduino SdCard Library </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">csPin</td><td>LeddarTechVu8 chip select pin.</td></tr>
-  </table>
-  </dd>
-</dl>
 <p>Initialize the LeddarVu8 sensor. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">csPin</td><td>- LeddarTechVu8 chip select pin. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Error code, or 0 if OK. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero value if error, and 0 if no error </dd></dl>
 
 </div>
 </div>
@@ -165,10 +366,10 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bufSend</td><td>- header sent to the LeddarVu8 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bufReceive</td><td>- data received from the LedderVu8, including the CRC16 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>- size of data package received </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">boolean</td><td>- true if CRC check is OK, false if fails </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean - true if CRC check is OK, false if fails </dd></dl>
 
 </div>
 </div>
@@ -197,14 +398,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Combines the bytes in a buffer to a 32-bit number </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>- buffer with bytes </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>- size of buffer </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>combined bytes in uint32_t format</dd></dl>
 <p>Converts an array of bytes with the least significant byte (LSB) coming first, to a 32-bit integer. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>- array of bytes with LSB coming first. </td></tr>
@@ -252,14 +445,1513 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aff7c737cddf3bd782e2562ac2a51b177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff7c737cddf3bd782e2562ac2a51b177">&#9670;&nbsp;</a></span>leddarCommand()</h2>
+<a id="a354db7b0b8e1132d20f73772b768da2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354db7b0b8e1132d20f73772b768da2c">&#9670;&nbsp;</a></span>getAccumulationExponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t * LeddarVu8Arduino::leddarCommand </td>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAccumulationExponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Accumulation exponent: I.e. 3 = 2^3 = 8 </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ACCUMMULATION_EXP </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Accumulation exponent </dd></dl>
+
+</div>
+</div>
+<a id="a3a4df0e4c31d228f7bb8dbd1bf549697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4df0e4c31d228f7bb8dbd1bf549697">&#9670;&nbsp;</a></span>getAccumulationExponentMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAccumulationExponentMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Accumulation exponent max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ACCUMULATION_EXP_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Accumulation Exponent max </dd></dl>
+
+</div>
+</div>
+<a id="a672be85bfa252101ad239a5a267f7649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672be85bfa252101ad239a5a267f7649">&#9670;&nbsp;</a></span>getAccumulationExponentMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAccumulationExponentMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Accumulation exponent min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ACCUMULATION_EXP_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Accumulation Exponent min </dd></dl>
+
+</div>
+</div>
+<a id="a236a0ff817312f3a83f81389bb0380b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a236a0ff817312f3a83f81389bb0380b6">&#9670;&nbsp;</a></span>getAcquisitionOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getAcquisitionOptions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get acquisiton options </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PERCENT_OF_LIGHT_SRC_PWR </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Acquisiton options </dd></dl>
+
+</div>
+</div>
+<a id="aa13ae04b1feb69a2840c1941680212b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13ae04b1feb69a2840c1941680212b6">&#9670;&nbsp;</a></span>getAsicVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAsicVersion </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>asicVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the ASIC version of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">asicVersion</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ASIC_VERSION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a79399dd7dc8ab5b2fa88f2a8c5f31138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79399dd7dc8ab5b2fa88f2a8c5f31138">&#9670;&nbsp;</a></span>getAutoDetectionsAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoDetectionsAverage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Auto detections average: Number of detections for saturation acceptance (the number of detections that can be saturated to avoid decreasing the light source power when using the automatic mode). This is the responsivity of the auto light source power according ro the number of detections. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_AUTO_ECHO_AVG </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto detections average </dd></dl>
+
+</div>
+</div>
+<a id="af27d41da2455dcaf7a64b1eeacf93f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27d41da2455dcaf7a64b1eeacf93f91">&#9670;&nbsp;</a></span>getAutoDetectionsAverageMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoDetectionsAverageMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto detections average max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_DETECTION_AVG_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto detections average max </dd></dl>
+
+</div>
+</div>
+<a id="a6c775e240e463b6baef2a9a760fccf69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c775e240e463b6baef2a9a760fccf69">&#9670;&nbsp;</a></span>getAutoDetectionsAverageMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoDetectionsAverageMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto detections average min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_DETECTION_AVG_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto detections average min </dd></dl>
+
+</div>
+</div>
+<a id="afc353817098e8e9eface5dd3c5c481dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc353817098e8e9eface5dd3c5c481dc">&#9670;&nbsp;</a></span>getAutoFrameAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getAutoFrameAverage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto frame average: Changes the delay in number of measurements. This is the responsivity of the auto light source power according to the number of frames. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_AUTO_FRAME_AVG </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto frame average </dd></dl>
+
+</div>
+</div>
+<a id="a020101f9addf169e232cf77783df71e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020101f9addf169e232cf77783df71e0">&#9670;&nbsp;</a></span>getAutoFrameAverageMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getAutoFrameAverageMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto frame average max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_FRAME_AVG_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto frame average max </dd></dl>
+
+</div>
+</div>
+<a id="ad1755b397ae9a206df21369213593f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1755b397ae9a206df21369213593f85">&#9670;&nbsp;</a></span>getAutoFrameAverageMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getAutoFrameAverageMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto frame average min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_FRAME_AVG_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto frame average min </dd></dl>
+
+</div>
+</div>
+<a id="a88cf8a34c74415727e7e44b1593687d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88cf8a34c74415727e7e44b1593687d2">&#9670;&nbsp;</a></span>getAutoLightSourcePowerEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoLightSourcePowerEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto light power source enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PERCENT_OF_LIGHT_SRC_PWR </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto light power source enabled </dd></dl>
+
+</div>
+</div>
+<a id="a2a01e36301fd7052bbcc56013e4baa8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a01e36301fd7052bbcc56013e4baa8f">&#9670;&nbsp;</a></span>getAutoLightSourcePowerPercentMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoLightSourcePowerPercentMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto light source power percent max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_LIGHT_SRC_PWR_PRCNT_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto light source power percent max </dd></dl>
+
+</div>
+</div>
+<a id="ac68548031418bb3e07c2e72eeb937c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac68548031418bb3e07c2e72eeb937c62">&#9670;&nbsp;</a></span>getAutoLightSourcePowerPercentMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getAutoLightSourcePowerPercentMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get auto light source power percent min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_AUTO_LIGHT_SRC_PWR_PRCNT_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto light source power percent min </dd></dl>
+
+</div>
+</div>
+<a id="a447a4421b7bb080f0771c347cb8e67ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447a4421b7bb080f0771c347cb8e67ca">&#9670;&nbsp;</a></span>getBasePointSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getBasePointSample </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Base point sample </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BASE_POINT_COUNT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Base point sample </dd></dl>
+
+</div>
+</div>
+<a id="a31a217af1b8f2c427e346205af981839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a217af1b8f2c427e346205af981839">&#9670;&nbsp;</a></span>getBasePointSampleDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getBasePointSampleDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Base Point sample distance of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BASE_POINT_SAMPLE_DISTANCE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Base point sample distance </dd></dl>
+
+</div>
+</div>
+<a id="a2f0d57d498e4215cccdcdb7d80d5100a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f0d57d498e4215cccdcdb7d80d5100a">&#9670;&nbsp;</a></span>getBasePointSampleMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getBasePointSampleMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Base point sample max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BASE_POINT_SAMPLE_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Base Point Sample max </dd></dl>
+
+</div>
+</div>
+<a id="a2f9895bbc8e79e2e533ee14b25ac3a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9895bbc8e79e2e533ee14b25ac3a2b">&#9670;&nbsp;</a></span>getBasePointSampleMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getBasePointSampleMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Base point sample min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BASE_POINT_SAMPLE_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Base Point Sample min </dd></dl>
+
+</div>
+</div>
+<a id="a1834b2b50ce89c717a71b066d16f3cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1834b2b50ce89c717a71b066d16f3cd8">&#9670;&nbsp;</a></span>getBitFieldInformationOfLastTransaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getBitFieldInformationOfLastTransaction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get bit-field information of last transaction: <br />
+ All bits to 0: No transaction error <br />
+ Bit-0: Access right violation <br />
+ Bit-1: Invalid address <br />
+ Bit-2: Command not found <br />
+ Bit-3: Write disabled <br />
+ Bit-4: CRC failed <br />
+ Bit-5: Command execution error <br />
+ Bit-6: Invalid packet </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_INFORMATION_LAST_TRANSACTION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Bit-field information of last transaction </dd></dl>
+
+</div>
+</div>
+<a id="a387e2f7f068336fe79fbdf3503919b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387e2f7f068336fe79fbdf3503919b34">&#9670;&nbsp;</a></span>getBootloaderVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getBootloaderVersion </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bootloaderVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Bootloader version of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">bootloaderVersion</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BOOTLOADER_VERSION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a9cf09dc093856d0f9f7d73d9c98d0d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf09dc093856d0f9f7d73d9c98d0d89">&#9670;&nbsp;</a></span>getBuildDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getBuildDate </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buildDate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the build date of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buildDate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BUILD_DATE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="abebe5fd4b3b87af138dedcf6056c55ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebe5fd4b3b87af138dedcf6056c55ba">&#9670;&nbsp;</a></span>getClockFrequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getClockFrequency </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get clock frequency of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_CLOCK_FREQUENCY </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Clock frequency </dd></dl>
+
+</div>
+</div>
+<a id="a6cb5c99bbdfa0f321250326e749ac80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb5c99bbdfa0f321250326e749ac80a">&#9670;&nbsp;</a></span>getCPUloadScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getCPUloadScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get CPU load scale of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_CPU_LOAD_SCALE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CPU load scale </dd></dl>
+
+</div>
+</div>
+<a id="a7e6433b3d53d01c8d34a835c7f25aa53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6433b3d53d01c8d34a835c7f25aa53">&#9670;&nbsp;</a></span>getCRClastTransaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getCRClastTransaction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get CRC of the last transaction </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_CRC_OF_THE_LAST_TRANSACTION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CRC of last transaction </dd></dl>
+
+</div>
+</div>
+<a id="adad5e9f05436e25fb815e80eb35fc87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad5e9f05436e25fb815e80eb35fc87a">&#9670;&nbsp;</a></span>getCurrentLightSourcePowerCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getCurrentLightSourcePowerCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get current light source power count of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_CURRENT_LIGHT_SOURCE_PWR_COUNT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Current light source power count </dd></dl>
+
+</div>
+</div>
+<a id="ad5535f674db23001635debea855c8eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5535f674db23001635debea855c8eeb">&#9670;&nbsp;</a></span>getCurrentPercentageOfLightSourcePower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getCurrentPercentageOfLightSourcePower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get current percentage of light source power </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PERCENT_OF_LIGHT_SRC_PWR </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Current percentage of light source power </dd></dl>
+
+</div>
+</div>
+<a id="a3c8cf3059386e0518aeb5731e0b7347c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8cf3059386e0518aeb5731e0b7347c">&#9670;&nbsp;</a></span>getDataTransactionControlSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getDataTransactionControlSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get data transaction control source: <br />
+ 0 = On trace <br />
+ 1 = On detections <br />
+ This register determines which data type will control the READY pin and manage the transaction mode. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DATA_TRANSACTION_CONTROL_SOURCE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Data transaction control source </dd></dl>
+
+</div>
+</div>
+<a id="ac470830ed0284da81a74e424e28062c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac470830ed0284da81a74e424e28062c3">&#9670;&nbsp;</a></span>getDeviceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getDeviceName </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>deviceName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Device name as an ASCII string of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">deviceName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DEVICE_NAME </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a1d631365ea809dd906b1fcb231f28fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d631365ea809dd906b1fcb231f28fe2">&#9670;&nbsp;</a></span>getDistanceScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getDistanceScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get distance scale of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DISTANCE_SCALE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Distance scale </dd></dl>
+
+</div>
+</div>
+<a id="a21a676bf7442c02b3fe5f29de40d4890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a676bf7442c02b3fe5f29de40d4890">&#9670;&nbsp;</a></span>getFgpaVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getFgpaVersion </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fgpaVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the FGPA version of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">fgpaVersion</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_FGPA_VERSION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="adde484649858028c97597b463db82768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde484649858028c97597b463db82768">&#9670;&nbsp;</a></span>getFirmwareVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getFirmwareVersion </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>firmwareVersion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Firmware version of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">firmwareVersion</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_FIRMWARE_VERSION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a247ea6b5639fbc08293ba564aa465597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a247ea6b5639fbc08293ba564aa465597">&#9670;&nbsp;</a></span>getGroupIdentificationNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getGroupIdentificationNumber </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>groupIdentificationNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the group identification number as a ASCII of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">groupIdentificationNumber</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_GROUP_IDENTIFICATION_NUMBER </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="ad31b37c2121931b90d13de5d8c56584a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31b37c2121931b90d13de5d8c56584a">&#9670;&nbsp;</a></span>getLightSourcePower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getLightSourcePower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get light source power (0 to 100) </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_CURRENT_POWER_PERCENT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Light source power (0 to 100) </dd></dl>
+
+</div>
+</div>
+<a id="ad3d19f547629bd35f3b3acb516d421a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d19f547629bd35f3b3acb516d421a6">&#9670;&nbsp;</a></span>getManufacturerName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getManufacturerName </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>manufacturerName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the manufacturer name of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">manufacturerName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_MANUFACTURER_NAME </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="aa26322a2f6271f60f47a7707117d68b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26322a2f6271f60f47a7707117d68b1">&#9670;&nbsp;</a></span>getMaxNumberOfDetectionsPerSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getMaxNumberOfDetectionsPerSegment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get maximum number of detections per segment of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_MAX_NUMBER_OF_DETEC_PER_SEGMENT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Maximum number of detections per segment </dd></dl>
+
+</div>
+</div>
+<a id="a2d815e85051b22e10e542e11376ab34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d815e85051b22e10e542e11376ab34b">&#9670;&nbsp;</a></span>getModulePartNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getModulePartNumber </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>modulePartNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the module number of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">moduleNumber</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_MODEL_PART_NUMBER </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a7ed9e20e9f7a01108aafaf26c7c40f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed9e20e9f7a01108aafaf26c7c40f05">&#9670;&nbsp;</a></span>getModuleSerialNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getModuleSerialNumber </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>moduleSerialNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the module serial number of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">moduleSerialNumber</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_MODULE_SERIAL_NUMBER </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="aaa28d0d352ba2cf240938f831ff9e567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa28d0d352ba2cf240938f831ff9e567">&#9670;&nbsp;</a></span>getModuleType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getModuleType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Module type of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_MODULE_TYPE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Module type </dd></dl>
+
+</div>
+</div>
+<a id="a517fded4e74bd0c0cff696c0c63d8481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517fded4e74bd0c0cff696c0c63d8481">&#9670;&nbsp;</a></span>getNumberOfDetections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getNumberOfDetections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of detections (N) </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_NUMBER_OF_DETECTIONS </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of detections (N) </dd></dl>
+
+</div>
+</div>
+<a id="aecce629b8b7ac1da7aad4fd26425180f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecce629b8b7ac1da7aad4fd26425180f">&#9670;&nbsp;</a></span>getNumberOfHorizontalSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getNumberOfHorizontalSegments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of horizontal segments of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_NUMBER_OF_HORIZONTAL_SEGMENTS </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of horizontal segments </dd></dl>
+
+</div>
+</div>
+<a id="a2a0064403f29e42e3d1a060a9d8014af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a0064403f29e42e3d1a060a9d8014af">&#9670;&nbsp;</a></span>getNumberOfReferenceSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getNumberOfReferenceSegments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of reference segments of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_NUMBER_OF_REFERENCE_SEGMENTS </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference segments </dd></dl>
+
+</div>
+</div>
+<a id="ab4db40610cc36b73c8e73dd95cfb57de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4db40610cc36b73c8e73dd95cfb57de">&#9670;&nbsp;</a></span>getNumberOfSamplesMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getNumberOfSamplesMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get max number of samples of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_NUMBER_OF_SAMPLE_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of sample max </dd></dl>
+
+</div>
+</div>
+<a id="a5465a022e19e1f9f3e0b98285d1f41ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5465a022e19e1f9f3e0b98285d1f41ea">&#9670;&nbsp;</a></span>getNumberOfVerticalSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t LeddarVu8Arduino::getNumberOfVerticalSegments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get number of vertical segments of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_NUMBER_OF_VERTICAL_SEGMENTS </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of vertical segments </dd></dl>
+
+</div>
+</div>
+<a id="a2ca5145601e968a2a373f2c644ed9034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca5145601e968a2a373f2c644ed9034">&#9670;&nbsp;</a></span>getObjectDemergingEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getObjectDemergingEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get object demerging (DEM) enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DEM_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Object demerging (DEM) enabled </dd></dl>
+
+</div>
+</div>
+<a id="a057344c9f5c1d5ca765df9d6cfdacc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057344c9f5c1d5ca765df9d6cfdacc1a">&#9670;&nbsp;</a></span>getOversamplingExponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getOversamplingExponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Oversampling exponent: I.e. 3 = 2^3 = 8 </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSSAMPLING_EXP </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Oversampling exponent </dd></dl>
+
+</div>
+</div>
+<a id="a1fb99afdf351d210d135e099adc444c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb99afdf351d210d135e099adc444c4">&#9670;&nbsp;</a></span>getOversamplingExponentMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getOversamplingExponentMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Oversampling exponent max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSAMPLING_EXP_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Oversampling Exponent max </dd></dl>
+
+</div>
+</div>
+<a id="a223588b0a3a9bd07b37db354a3aeb11f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223588b0a3a9bd07b37db354a3aeb11f">&#9670;&nbsp;</a></span>getOversamplingExponentMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getOversamplingExponentMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Oversampling exponent min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSAMPLING_EXP_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Oversampling Exponent min </dd></dl>
+
+</div>
+</div>
+<a id="a021b94893c21df6030aec5946dfeeb1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021b94893c21df6030aec5946dfeeb1b">&#9670;&nbsp;</a></span>getOvershootManagementEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getOvershootManagementEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get overshoot managment enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSHOOT_MANAGEMENT_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Overshoot managment enabled. </dd></dl>
+
+</div>
+</div>
+<a id="a8d5c8f97cbc61a0362c3f39ebe0839d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5c8f97cbc61a0362c3f39ebe0839d0">&#9670;&nbsp;</a></span>getPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getPitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get pitch angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PITCH </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pitch angle of the module </dd></dl>
+
+</div>
+</div>
+<a id="a85e019df673782385a5bab1157bf4acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e019df673782385a5bab1157bf4acb">&#9670;&nbsp;</a></span>getPrecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t LeddarVu8Arduino::getPrecision </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Precision (smoothing) Stabilizes the module measurements. The behavior of the smoothing algorithm can be adjusted by a value from -16 to 16. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PRECISION </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision (smoothing) </dd></dl>
+
+</div>
+</div>
+<a id="aaf0446e7db9a351d8d944f855ca6465b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0446e7db9a351d8d944f855ca6465b">&#9670;&nbsp;</a></span>getPrecisionEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getPrecisionEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Precision (smoothing) enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PRECISION_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision (smoothing) enabled </dd></dl>
+
+</div>
+</div>
+<a id="a957f3f55345a275c5ad940d941be9aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957f3f55345a275c5ad940d941be9aa9">&#9670;&nbsp;</a></span>getPrecisionMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t LeddarVu8Arduino::getPrecisionMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get precision max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PRECISION_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision max </dd></dl>
+
+</div>
+</div>
+<a id="ab8c2f8c1f7f8e9ec53ec7d9f12bb287b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c2f8c1f7f8e9ec53ec7d9f12bb287b">&#9670;&nbsp;</a></span>getPrecisionMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t LeddarVu8Arduino::getPrecisionMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get precision min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PRECISION_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision min </dd></dl>
+
+</div>
+</div>
+<a id="a6ed4085062fea81ebc3f7d6713d435d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed4085062fea81ebc3f7d6713d435d8">&#9670;&nbsp;</a></span>getRawAmplitudeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getRawAmplitudeScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get raw amplitude scale of the Leddar device. To get amplitude: (Raw amplitude) / (raw amplitude scale + 8192) </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_RAW_AMPLITUDE_SCALE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Raw amplitude scale </dd></dl>
+
+</div>
+</div>
+<a id="ac1adaeaef49f5b46c80385602d779894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1adaeaef49f5b46c80385602d779894">&#9670;&nbsp;</a></span>getRawAmplitudeScaleBit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getRawAmplitudeScaleBit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get raw amplitude scale bit of the Leddar device. To get amplitude: (Raw amplitude) &lt;&lt; (scale bit + 0x0D) </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_RAW_AMPLITUDE_SCALE_BIT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Raw amplitude scale bit </dd></dl>
+
+</div>
+</div>
+<a id="afae5210999be827d8cb1036a55d89122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae5210999be827d8cb1036a55d89122">&#9670;&nbsp;</a></span>getReferencePulseRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getReferencePulseRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get acquisiton rate of the reference pulse </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_REF_PULSE_RATE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Acquisiton rate of the reference pulse </dd></dl>
+
+</div>
+</div>
+<a id="a77684e331227b15352e8512c957de9c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77684e331227b15352e8512c957de9c7">&#9670;&nbsp;</a></span>getReferenceSegmentMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getReferenceSegmentMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Reference segment mask of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_REFERENCE_SEGMENT_MASK </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference segment mask </dd></dl>
+
+</div>
+</div>
+<a id="a2b6b51b15e993a8f3a7eb93a99986571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6b51b15e993a8f3a7eb93a99986571">&#9670;&nbsp;</a></span>getRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getRoll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get roll angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ROLL </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Roll angle of the module </dd></dl>
+
+</div>
+</div>
+<a id="a171b78ebd4b3a611fbd03394974bc371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171b78ebd4b3a611fbd03394974bc371">&#9670;&nbsp;</a></span>getSaturationCompensationEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getSaturationCompensationEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get saturation compensation enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SAT_COMP_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Saturation compensation enabled. </dd></dl>
+
+</div>
+</div>
+<a id="a790ca662557a4a30d4dec99852819ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790ca662557a4a30d4dec99852819ce0">&#9670;&nbsp;</a></span>getSecureTransactionEnabledFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getSecureTransactionEnabledFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get secure transaction enabled flags: <br />
+ 1 = Enables the CRC calculation and validation on any transaction. This flag is enabled by default.<br />
+ 0 = No CRC validation. The CRC field is still required in SPI protocol but can be set to any value. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SECURE_TRANSACTION_ENABLED_FLAGS </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Secure transaction enabled flags </dd></dl>
+
+</div>
+</div>
+<a id="a80cd2a97353b0d013a8267385ff88efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80cd2a97353b0d013a8267385ff88efb">&#9670;&nbsp;</a></span>getSegmentEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getSegmentEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get bit field of segment enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SEGMENT_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Bit field of segment enabled </dd></dl>
+
+</div>
+</div>
+<a id="a055c4c866cb668628e98b9082dcadca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055c4c866cb668628e98b9082dcadca0">&#9670;&nbsp;</a></span>getSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t LeddarVu8Arduino::getSensitivity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Sensitivity (detection threshold) setting expressed in a raw amplitude scale. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SENSITIVITY </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Overshoot managment enabled. </dd></dl>
+
+</div>
+</div>
+<a id="a1d8a9a05f118dc85e4ef692b9c893fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8a9a05f118dc85e4ef692b9c893fea">&#9670;&nbsp;</a></span>getSensitivityMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t LeddarVu8Arduino::getSensitivityMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get sensitivity max of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SENSITIVITY_MAX </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Sensitivity max </dd></dl>
+
+</div>
+</div>
+<a id="a1e8b3d6a57df71db65c9f7477d85f3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8b3d6a57df71db65c9f7477d85f3cd">&#9670;&nbsp;</a></span>getSensitivityMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t LeddarVu8Arduino::getSensitivityMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get sensitivity min of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SENSITIVITY_MIN </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Sensitivity min </dd></dl>
+
+</div>
+</div>
+<a id="aa49db3eb058d915ab2dd2bf38cbad48e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49db3eb058d915ab2dd2bf38cbad48e">&#9670;&nbsp;</a></span>getSoftwarePartNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getSoftwarePartNumber </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>softwarePartNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the software part number of the Leddar device. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">softwarePartNumber</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SOFTWARE_PART_NUMBER </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a7aefc41629372b3a924e1831e43cb485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aefc41629372b3a924e1831e43cb485">&#9670;&nbsp;</a></span>getStaticNoiseCalibrationSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getStaticNoiseCalibrationSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get static noise calibration source of the Leddar device. 0 = By end-user 1 = By factory </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_STATIC_NOISE_CALIBRATION_SOURCE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Static noise calibration source </dd></dl>
+
+</div>
+</div>
+<a id="a8eb5b33fbe845b7e82121951b6834196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb5b33fbe845b7e82121951b6834196">&#9670;&nbsp;</a></span>getStaticNoiseRemovalEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getStaticNoiseRemovalEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Static noise removal enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ST_NOISE_REMOVAL </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Static noise removal enabled </dd></dl>
+
+</div>
+</div>
+<a id="ad04aba2e6f665ba3a37101501582e10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04aba2e6f665ba3a37101501582e10a">&#9670;&nbsp;</a></span>getTemperatureScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getTemperatureScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get temperature scale of the Leddar device. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_TEMPERATURE_SCALE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Temperature scale </dd></dl>
+
+</div>
+</div>
+<a id="ac3425930fd4b07b9fa8b5231e2b011ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3425930fd4b07b9fa8b5231e2b011ad">&#9670;&nbsp;</a></span>getTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t LeddarVu8Arduino::getTimestamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Timestamp in ms since power up </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_TIMESTAMP </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Timestamp </dd></dl>
+
+</div>
+</div>
+<a id="a8ccb712042592f9e5686d62461b8307a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ccb712042592f9e5686d62461b8307a">&#9670;&nbsp;</a></span>getTransactionMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::getTransactionMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get transaction mode: <br />
+ 0 = Free run. The READY pin is asserted on each ready detection frame. The host must be able to read data on time. <br />
+ 1 = Blocking read. On the READY pin assertion, host must read all data from traces or detections bank (data transaction control source configuration) to continue acquisition. <br />
+ 2 = Partial blocking read. On the READY pin assertion, host can read all data from traces of the detection bank and the acquisition is still running. Possible loss of detection frames if the host reading data is very long. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_TRANSACTION_MODES </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Transaction mode </dd></dl>
+
+</div>
+</div>
+<a id="a5d199d7c28f29122d74c347d7d94a19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d199d7c28f29122d74c347d7d94a19f">&#9670;&nbsp;</a></span>getXPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getXPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get X-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_X </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>X-axis poistion of the module </dd></dl>
+
+</div>
+</div>
+<a id="ab773113dddc141f8e8dc1dbe7b9aa99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab773113dddc141f8e8dc1dbe7b9aa99f">&#9670;&nbsp;</a></span>getYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getYaw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get yaw angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_YAW </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Yaw angle of the module </dd></dl>
+
+</div>
+</div>
+<a id="a117ddd5288c56d978a5f447cbfa9488d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117ddd5288c56d978a5f447cbfa9488d">&#9670;&nbsp;</a></span>getYPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getYPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Y-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_Y </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Y-axis poistion of the module </dd></dl>
+
+</div>
+</div>
+<a id="ac1a7a7a135b07d5e254f107ee1342465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a7a7a135b07d5e254f107ee1342465">&#9670;&nbsp;</a></span>getZPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float LeddarVu8Arduino::getZPos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Z-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_Z </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Z-axis poistion of the module </dd></dl>
+
+</div>
+</div>
+<a id="a6973bc2a95c7a4486c959f42ac279ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6973bc2a95c7a4486c959f42ac279ce6">&#9670;&nbsp;</a></span>readCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * LeddarVu8Arduino::readCommand </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>opcode</em>, </td>
@@ -283,12 +1975,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Send command to leddar sensor through SPI </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Send read command to leddar sensor through SPI </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td>Send command to leddar sensor through SPI </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
   </table>
@@ -330,15 +2018,56 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if no error, or a non-zero error code</dd></dl>
-<p>Read Echoes from the LeddarTech Vu8 sensor </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="section return"><dt>Returns</dt><dd>nonzero value if error, and 0 if no error </dd></dl>
+
+</div>
+</div>
+<a id="ae7f33b81295968af3cbad7782354c930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f33b81295968af3cbad7782354c930">&#9670;&nbsp;</a></span>readLeddarCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::readLeddarCommand </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send read command to leddar sensor through SPI, catch the response and quality check with CRC. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">distances</td><td>- scaled distance - in meters </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">amplitudes</td><td>- scaled amplitudes - in ?? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>- answer from the unit in length of dataSize. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>nonzero value if error, and 0 if no error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error. </dd></dl>
 
 </div>
 </div>
@@ -367,13 +2096,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Read Raw Echoes from the LeddarTech Vu8 sensor </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">distances</td><td>- raw distances </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">amplitudes</td><td>- raw amplitudes</td></tr>
-  </table>
-  </dd>
-</dl>
 <p>Read the raw echo values from the Leddar Vu8 sensor, i.e., raw distances and amplitudes. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">distances</td><td>- array of 8 raw distances </td></tr>
@@ -382,6 +2104,517 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if no errors, and a nonzero value if an error occured. </dd></dl>
+
+</div>
+</div>
+<a id="a6d7b8772707297889faf411258d4a66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7b8772707297889faf411258d4a66d">&#9670;&nbsp;</a></span>setAccumulationExponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setAccumulationExponent </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>AccumulationExponent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Accumulation exponent: I.e. 3 = 2^3 = 8 </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ACCUMMULATION_EXP </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a0293841b3591c0b6a3d1b4818eebd2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0293841b3591c0b6a3d1b4818eebd2bc">&#9670;&nbsp;</a></span>setAutoDetectionsAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setAutoDetectionsAverage </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>autoDetectionsAverage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Auto detections average </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_AUTO_ECHO_AVG </dd>
+<dd>
+<a class="el" href="class_leddar_vu8_arduino.html#a79399dd7dc8ab5b2fa88f2a8c5f31138">getAutoDetectionsAverage()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a263313615f3e193260d73a0b14562816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a263313615f3e193260d73a0b14562816">&#9670;&nbsp;</a></span>setAutoFrameAverage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setAutoFrameAverage </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>autoFrameAverage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set auto frame average </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_AUTO_FRAME_AVG </dd>
+<dd>
+<a class="el" href="class_leddar_vu8_arduino.html#afc353817098e8e9eface5dd3c5c481dc">getAutoFrameAverage()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="ab12796cf8bdbde8b153ffd0cf9b5cf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab12796cf8bdbde8b153ffd0cf9b5cf4f">&#9670;&nbsp;</a></span>setAutoLightSourcePowerEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setAutoLightSourcePowerEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>autoLightSourcePowerEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set auto light power source enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PERCENT_OF_LIGHT_SRC_PWR </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="aed0adfa1be10c0bf021c4b6b70ea7213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0adfa1be10c0bf021c4b6b70ea7213">&#9670;&nbsp;</a></span>setBasePointSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setBasePointSample </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>basePointSample</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Base point sample </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_BASE_POINT_COUNT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="aacc9d37f093300850523c533967b89ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc9d37f093300850523c533967b89ba">&#9670;&nbsp;</a></span>setDataTransactionControlSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setDataTransactionControlSource </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>dataTransactionControlSource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set data transaction control source <br />
+ </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DATA_TRANSACTION_CONTROL_SOURCE </dd>
+<dd>
+<a class="el" href="class_leddar_vu8_arduino.html#a3c8cf3059386e0518aeb5731e0b7347c">getDataTransactionControlSource()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a32b8049e422755346315f02e5b6f2a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b8049e422755346315f02e5b6f2a05">&#9670;&nbsp;</a></span>setLightSourcePower()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setLightSourcePower </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>lightSourcePower</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set light source power (0 to 100) </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_LED_USER_CURRENT_POWER_PERCENT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="aa46545cbb6ad699db9cd3ff862a03e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46545cbb6ad699db9cd3ff862a03e5a">&#9670;&nbsp;</a></span>setObjectDemergingEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setObjectDemergingEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>objectDemergingEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set object demerging (DEM) enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_DEM_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a0c3045cbdf6d639533cde8902058af7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3045cbdf6d639533cde8902058af7b">&#9670;&nbsp;</a></span>setOversamplingExponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setOversamplingExponent </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>oversamplingExponent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Oversampling exponent: I.e. 3 = 2^3 = 8 </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSSAMPLING_EXP </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a65c44e69b45d1af61c6a57570acb9da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c44e69b45d1af61c6a57570acb9da0">&#9670;&nbsp;</a></span>setOvershootManagementEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setOvershootManagementEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>overshootManagementEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set overshoot managment enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_OVERSHOOT_MANAGEMENT_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="aa32cccc4ee9358c34f03d4b3f7bd193a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32cccc4ee9358c34f03d4b3f7bd193a">&#9670;&nbsp;</a></span>setPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setPitch </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pitch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set pitch angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PITCH </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a54183863ac84acb45b7546a8a6be72aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54183863ac84acb45b7546a8a6be72aa">&#9670;&nbsp;</a></span>setPrecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setPrecision </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>precision</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Precision (smoothing) </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="class_leddar_vu8_arduino.html#a85e019df673782385a5bab1157bf4acb">getPrecision()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a3f63b1fc97470c8ef98df7511a8e1eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f63b1fc97470c8ef98df7511a8e1eae">&#9670;&nbsp;</a></span>setPrecisionEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setPrecisionEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>precisionEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Precision (smoothing) enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_PRECISION_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a749c209540c585d31d24eb04cfc05d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749c209540c585d31d24eb04cfc05d68">&#9670;&nbsp;</a></span>setReferencePulseRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setReferencePulseRate </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>referencePulseRate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set acquisiton rate of the reference pulse </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_REF_PULSE_RATE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="ae3ace17be911e8df701c167de18faecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ace17be911e8df701c167de18faecf">&#9670;&nbsp;</a></span>setRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setRoll </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>roll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set roll angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ROLL </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a03c855db276eb5e488433f12ec966f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03c855db276eb5e488433f12ec966f92">&#9670;&nbsp;</a></span>setSaturationCompensationEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setSaturationCompensationEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>saturationCompensationEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set saturation compensation enabled. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SAT_COMP_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="ab3fbe942bf0709e63d74da1cb5e8bd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fbe942bf0709e63d74da1cb5e8bd10">&#9670;&nbsp;</a></span>setSecureTransactionEnabledFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setSecureTransactionEnabledFlags </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>secureTransactionEnabledFlags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set secure transaction enabled flags: </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SECURE_TRANSACTION_ENABLED_FLAGS </dd>
+<dd>
+<a class="el" href="class_leddar_vu8_arduino.html#a790ca662557a4a30d4dec99852819ce0">getSecureTransactionEnabledFlags()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a9c4e8fa5eabc9a5e6eda0409cba219c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4e8fa5eabc9a5e6eda0409cba219c1">&#9670;&nbsp;</a></span>setSegmentEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setSegmentEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>segmentEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set bit field of segment enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SEGMENT_ENABLE </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a52c53364569b1f081e9e51bc04de5de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52c53364569b1f081e9e51bc04de5de8">&#9670;&nbsp;</a></span>setSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setSensitivity </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>sensitivity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Sensitivity (detection threshold) setting expressed in a raw amplitude scale. </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_SENSITIVITY </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="aea534f5014f7928bd0c37e8fcac3d8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea534f5014f7928bd0c37e8fcac3d8f5">&#9670;&nbsp;</a></span>setStaticNoiseRemovalEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setStaticNoiseRemovalEnabled </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>staticNoiseRemovalEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Static noise removal enabled </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_ST_NOISE_REMOVAL </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a2cddf4581c93582b6eb99eb1ae63ed4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cddf4581c93582b6eb99eb1ae63ed4d">&#9670;&nbsp;</a></span>setTransactionMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setTransactionMode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>transactionMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set transaction mode </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_TRANSACTION_MODE </dd>
+<dd>
+<a class="el" href="class_leddar_vu8_arduino.html#a8ccb712042592f9e5686d62461b8307a">getTransactionMode()</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero for error </dd></dl>
+
+</div>
+</div>
+<a id="a340e039089e9a4acfcad47c77228b8fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340e039089e9a4acfcad47c77228b8fe">&#9670;&nbsp;</a></span>setXPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setXPos </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>xPos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set X-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_X </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a7d856440ebee074bc8011ff953c92123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d856440ebee074bc8011ff953c92123">&#9670;&nbsp;</a></span>setYaw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setYaw </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yaw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set yaw angle of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_YAW </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a1b061682d89db3a8e6e6aece2d692760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b061682d89db3a8e6e6aece2d692760">&#9670;&nbsp;</a></span>setYPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setYPos </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>yPos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Y-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_Y </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
+
+</div>
+</div>
+<a id="a386d4f26cfff4d2b868e93a8daf82d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386d4f26cfff4d2b868e93a8daf82d6b">&#9670;&nbsp;</a></span>setZPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::setZPos </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>zPos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set Z-axis poistion of the module </p><dl class="section see"><dt>See also</dt><dd>LEDDARVU8_Z </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error </dd></dl>
 
 </div>
 </div>
@@ -418,6 +2651,146 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Finish the SPI transfer </p>
+
+</div>
+</div>
+<a id="a25e8ab1e6f65aae0e1e5c55a8546828a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e8ab1e6f65aae0e1e5c55a8546828a">&#9670;&nbsp;</a></span>writeCommand() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeddarVu8Arduino::writeCommand </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send write command to leddar sensor through SPI </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad504b89d55c3e9594f7159905dcbd815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad504b89d55c3e9594f7159905dcbd815">&#9670;&nbsp;</a></span>writeCommand() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LeddarVu8Arduino::writeCommand </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>opcode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send write command to leddar sensor with data through SPI </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">opcode</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a650f7b22d2e06784272054a2566d1e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650f7b22d2e06784272054a2566d1e56">&#9670;&nbsp;</a></span>writeLeddarCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t LeddarVu8Arduino::writeLeddarCommand </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Modify a parameter by writing data to the leddar device. The manual gives the following recipee:</p><ol type="1">
+<li>Disable the write protection</li>
+<li>Poll the status register to get the ready state and write enabled flag asserted.</li>
+<li>Send the new parameter value.</li>
+<li>Poll the status register to get the ready state</li>
+<li>Send the write disabled command (write protection) to prevent any unwanted parameter change.</li>
+</ol>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>- value to be set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nonzero if error. </dd></dl>
 
 </div>
 </div>

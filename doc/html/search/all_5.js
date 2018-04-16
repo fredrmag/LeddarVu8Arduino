@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['spistart',['spiStart',['../class_leddar_vu8_arduino.html#a7acc1c7227f3a7bb121997dfb7ace42b',1,'LeddarVu8Arduino']]],
-  ['spistop',['spiStop',['../class_leddar_vu8_arduino.html#a63ac2511b7ed73db8ea34fdf06e48d7a',1,'LeddarVu8Arduino']]]
+  ['readcommand',['readCommand',['../class_leddar_vu8_arduino.html#a6973bc2a95c7a4486c959f42ac279ce6',1,'LeddarVu8Arduino']]],
+  ['readechoes',['readEchoes',['../class_leddar_vu8_arduino.html#af5bb87fe4080c6dce4ce533ddc690399',1,'LeddarVu8Arduino']]],
+  ['readleddarcommand',['readLeddarCommand',['../class_leddar_vu8_arduino.html#ae7f33b81295968af3cbad7782354c930',1,'LeddarVu8Arduino']]],
+  ['readrawechoes',['readRawEchoes',['../class_leddar_vu8_arduino.html#a183db757a93e4f0023ee131a93786ddf',1,'LeddarVu8Arduino']]]
 ];
