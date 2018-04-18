@@ -217,6 +217,7 @@ uint32_t LeddarVu8Arduino::combineBytes(uint8_t* buf,size_t n) {
 uint8_t LeddarVu8Arduino::readLeddarCommand(uint8_t opcode, uint32_t address, size_t dataSize, uint8_t* buf){
   size_t size = dataSize; // 8*12 bytes = 96
   uint8_t *bufSend;
+
   bufSend = readCommand(opcode, address, size);
   // delay 1 ms according to manual
   delay(1);
@@ -233,7 +234,7 @@ uint8_t LeddarVu8Arduino::readLeddarCommand(uint8_t opcode, uint32_t address, si
   #endif
 
   spiStop();
-
+  delay(1);
   // Check the CRC16
   if(!checkCRC(bufSend,bufReceive,size)){
     return ERROR_LEDDAR_CRC;
@@ -407,7 +408,10 @@ uint8_t LeddarVu8Arduino::getOversamplingExponent(){
 uint8_t LeddarVu8Arduino::setOversamplingExponent(uint8_t oversamplingExponent){
   return set8uint(LEDDARVU8_OVERSSAMPLING_EXP, oversamplingExponent);
 }
-/** Get Base point sample
+/** Get base point samples.
+*   Base point sample determines how long the device will keep listening to get
+*   a detection. Thus, it affects the distance. If we listens for more samples,
+*   we can receive samples that are farther away, thus increasing the distance.
 *   \see LEDDARVU8_BASE_POINT_COUNT
 *   \return Base point sample
 */
@@ -416,6 +420,7 @@ uint8_t LeddarVu8Arduino::getBasePointSample(){
 }
 /** Set Base point sample
 *   \see LEDDARVU8_BASE_POINT_COUNT
+*   \see getBasePointSample()
 *   \return nonzero if error
 */
 uint8_t LeddarVu8Arduino::setBasePointSample(uint8_t basePointSample){
@@ -450,6 +455,8 @@ uint8_t LeddarVu8Arduino::setReferencePulseRate(uint32_t referencePulseRate){
   return set32uint(LEDDARVU8_REF_PULSE_RATE, referencePulseRate);
 }
 /** Get yaw angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_YAW
 *   \return Yaw angle of the module
 */
@@ -457,6 +464,8 @@ float LeddarVu8Arduino::getYaw(){
   return getFloat(LEDDARVU8_YAW);
 }
 /** Set yaw angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_YAW
 *   \return nonzero if error
 */
@@ -464,6 +473,8 @@ uint8_t LeddarVu8Arduino::setYaw(float yaw){
   return setFloat(LEDDARVU8_YAW, yaw);
 }
 /** Get pitch angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_PITCH
 *   \return Pitch angle of the module
 */
@@ -471,6 +482,8 @@ float LeddarVu8Arduino::getPitch(){
   return getFloat(LEDDARVU8_PITCH);
 }
 /** Set pitch angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_PITCH
 *   \return nonzero if error
 */
@@ -478,6 +491,8 @@ uint8_t LeddarVu8Arduino::setPitch(float pitch){
   return setFloat(LEDDARVU8_PITCH, pitch);
 }
 /** Get roll angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_ROLL
 *   \return Roll angle of the module
 */
@@ -485,6 +500,8 @@ float LeddarVu8Arduino::getRoll(){
   return getFloat(LEDDARVU8_ROLL);
 }
 /** Set roll angle of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_ROLL
 *   \return nonzero if error
 */
@@ -492,6 +509,8 @@ uint8_t LeddarVu8Arduino::setRoll(float roll){
   return setFloat(LEDDARVU8_ROLL, roll);
 }
 /** Get X-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_X
 *   \return X-axis poistion of the module
 */
@@ -499,6 +518,8 @@ float LeddarVu8Arduino::getXPos(){
   return getFloat(LEDDARVU8_X);
 }
 /** Set X-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_X
 *   \return nonzero if error
 */
@@ -506,6 +527,8 @@ uint8_t LeddarVu8Arduino::setXPos(float xPos){
   return setFloat(LEDDARVU8_X, xPos);
 }
 /** Get Y-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_Y
 *   \return Y-axis poistion of the module
 */
@@ -513,6 +536,8 @@ float LeddarVu8Arduino::getYPos(){
   return getFloat(LEDDARVU8_Y);
 }
 /** Set Y-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_Y
 *   \return nonzero if error
 */
@@ -520,6 +545,8 @@ uint8_t LeddarVu8Arduino::setYPos(float yPos){
   return setFloat(LEDDARVU8_Y, yPos);
 }
 /** Get Z-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_Z
 *   \return Z-axis poistion of the module
 */
@@ -527,6 +554,8 @@ float LeddarVu8Arduino::getZPos(){
   return getFloat(LEDDARVU8_Z);
 }
 /** Set Z-axis poistion of the module
+*   - Has no purpose at the moment. To be implemented in the future by
+*     LeddarTech
 *   \see LEDDARVU8_Z
 *   \return nonzero if error
 */
@@ -1124,13 +1153,14 @@ uint8_t LeddarVu8Arduino::setDataTransactionControlSource(uint8_t dataTransactio
 uint8_t LeddarVu8Arduino::get8uint(uint32_t address){
   size_t size = 1;
   uint8_t buf[size];
+
   readLeddarCommand(READ,address,size,buf);
   uint8_t bufInt = buf[0];
 
   #if (LEDDAR_DEBUG == 1)
       Serial.println(bufInt,HEX);
   #endif
-
+  delay(1);
   return bufInt;
 }
 // helper function get8uint
@@ -1143,7 +1173,7 @@ uint8_t LeddarVu8Arduino::get8uint(uint8_t opcode, uint32_t address){
   #if (LEDDAR_DEBUG == 1)
       Serial.println(bufInt,HEX);
   #endif
-
+  delay(1);
   return bufInt;
 }
 
@@ -1161,6 +1191,7 @@ uint16_t LeddarVu8Arduino::get16uint(uint32_t address){
       Serial.println();
       Serial.println(bufInt,HEX);
   #endif
+  delay(1);
   return bufInt;
 }
 
@@ -1178,6 +1209,7 @@ uint32_t LeddarVu8Arduino::get32uint(uint32_t address){
       Serial.println();
       Serial.println(bufInt,HEX);
   #endif
+  delay(1);
   return bufInt;
 }
 // helper function get8int
@@ -1194,6 +1226,7 @@ int8_t LeddarVu8Arduino::get8int(uint32_t address){
       Serial.println();
       Serial.println(bufInt,HEX);
   #endif
+  delay(1);
   return bufInt;
 }
 
@@ -1211,6 +1244,7 @@ int16_t LeddarVu8Arduino::get16int(uint32_t address){
       Serial.println();
       Serial.println(bufInt,HEX);
   #endif
+  delay(1);
   return bufInt;
 }
 // helper function get32int
@@ -1227,6 +1261,7 @@ int32_t LeddarVu8Arduino::get32int(uint32_t address){
       Serial.println();
       Serial.println(bufInt,HEX);
   #endif
+  delay(1);
   return bufInt;
 }
 
@@ -1244,6 +1279,7 @@ float LeddarVu8Arduino::getFloat(uint32_t address){
       Serial.println();
       Serial.println(leddarData.i,HEX);
   #endif
+  delay(1);
   return leddarData.f;
 }
 
@@ -1262,6 +1298,7 @@ uint8_t LeddarVu8Arduino::get32char(uint32_t address, char* bufChar){
   for (int j = 0; j < 32; j++) {
     bufChar[j] = buf[j];
   }
+  delay(1);
   return check;
 }
 

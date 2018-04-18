@@ -16,7 +16,7 @@ uint8_t csPin = 10;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("LeddarVu8Arduino library Testing");
   int8_t check = leddarVu8.begin(csPin);
   if (check <= 0) {
@@ -29,11 +29,13 @@ void setup() {
 
 void loop() {
   // Reading amplitudes and distances
-  Serial.println("Reading amplitudes and distances: ");
+  //Serial.println("Reading amplitudes and distances: ");
+  uint32_t timestamp = millis();
   float distances[8];
   float amplitudes[8];
   int8_t check = leddarVu8.readEchoes(distances, amplitudes);
   if (check <= 0) {
+    Serial.println(timestamp);
     for (int i = 0; i < 8; i++) {
       Serial.print(distances[i], 4);
       Serial.print("\t");
@@ -42,5 +44,5 @@ void loop() {
   } else {
     Serial.print("Error: "); Serial.print(check);
   }
-  delay(2000);
+  delay(100);
 }

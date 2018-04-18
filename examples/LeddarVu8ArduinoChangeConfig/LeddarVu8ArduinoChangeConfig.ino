@@ -28,9 +28,15 @@ void setup() {
   Serial.println();
 
   // Change configuration data
-  leddarVu8.setAccumulationExponent(4);
-  leddarVu8.setOversamplingExponent(2);
-  leddarVu8.setBasePointSample(10);
+  //leddarVu8.setAccumulationExponent(5);
+  check = leddarVu8.setOversamplingExponent(2);
+  if (check > 0) {
+    Serial.print("Error in changing config: "); Serial.println(check);
+  } else {
+    Serial.println("Oversampling changed succesfully");
+  }
+  //leddarVu8.setBasePointSample(10);
+
 }
 
 void loop() {

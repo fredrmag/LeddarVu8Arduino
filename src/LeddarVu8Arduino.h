@@ -240,13 +240,17 @@ public:
   *   \return nonzero if error
   */
   uint8_t setOversamplingExponent(uint8_t oversamplingExponent);
-  /** Get Base point sample
+  /** Get base point samples.
+  *   Base point sample determines how long the device will keep listening to get
+  *   a detection. Thus, it affects the distance. If we listens for more samples,
+  *   we can receive samples that are farther away, thus increasing the distance.
   *   \see LEDDARVU8_BASE_POINT_COUNT
   *   \return Base point sample
   */
   uint8_t getBasePointSample();
   /** Set Base point sample
   *   \see LEDDARVU8_BASE_POINT_COUNT
+  *   \see getBasePointSample()
   *   \return nonzero if error
   */
   uint8_t setBasePointSample(uint8_t basePointSample);
@@ -276,56 +280,78 @@ public:
   */
   float getYaw();
   /** Set yaw angle of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_YAW
   *   \return nonzero if error
   */
   uint8_t setYaw(float yaw);
   /** Get pitch angle of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_PITCH
   *   \return Pitch angle of the module
   */
   float getPitch();
   /** Set pitch angle of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_PITCH
   *   \return nonzero if error
   */
   uint8_t setPitch(float pitch);
   /** Get roll angle of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_ROLL
   *   \return Roll angle of the module
   */
   float getRoll();
   /** Set roll angle of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_ROLL
   *   \return nonzero if error
   */
   uint8_t setRoll(float roll);
   /** Get X-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_X
   *   \return X-axis poistion of the module
   */
   float getXPos();
   /** Set X-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_X
   *   \return nonzero if error
   */
   uint8_t setXPos(float xPos);
   /** Get Y-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_Y
   *   \return Y-axis poistion of the module
   */
   float getYPos();
   /** Set Y-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_Y
   *   \return nonzero if error
   */
   uint8_t setYPos(float yPos);
   /** Get Z-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_Z
   *   \return Z-axis poistion of the module
   */
   float getZPos();
   /** Set Z-axis poistion of the module
+  *   - Has no purpose at the moment. To be implemented in the future by
+  *     LeddarTech
   *   \see LEDDARVU8_Z
   *   \return nonzero if error
   */
