@@ -14,7 +14,16 @@
 
 #include <SPI.h>
 
-#define LEDDAR_DEBUG 0
+/*
+ * Variants may define an alternative SPI instace to use for the LeddarVu8.
+ * If not defined the following defaults are used:
+ *   LeddarVu8SPI   - SPI
+ */
+#if !defined(LeddarVu8SPI)
+  #define LeddarVu8SPI SPI
+#endif
+
+#define LEDDAR_DEBUG 1
 
 #define DISTANCE_SCALE 65536
 #define AMPLITUDE_SCALE 8256

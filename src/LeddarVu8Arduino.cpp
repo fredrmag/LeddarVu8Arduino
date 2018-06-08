@@ -20,9 +20,17 @@ uint8_t LeddarVu8Arduino::begin(uint8_t csPin){
   // Initialize SPI - modified from the Arduino SD-card library.
   m_spiActive = false;
   spiBegin(csPin);
-  spiSetSpiSettings(SPISettings(15000000, MSBFIRST, SPI_MODE0)); // 15 MHz
+  spiSetSpiSettings(SPISettings(8000000, MSBFIRST, SPI_MODE0)); // 8 MHz
   spiStart();
-
+  // wait for the device to be ready
+  uint8_t i = 0;
+    while (get8uint(RDSR,0) > 0){
+      delay(300);
+	  i++;
+	  if(i > 5){
+		  return ERROR_LEDDAR_NO_RESPONSE;
+	  }
+    }
   // Check if we are connected to the LeddarVu8 sensor. The module type address
   // returns 0x0D if we are connected to a LeddarVu8 sensor.
 
@@ -303,7 +311,8 @@ uint8_t LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitude
   size_t size = 96; // 8*12 bytes = 96
   uint8_t buf[size];
   uint8_t check = readLeddarCommand(READ,LEDDARVU8_START_OF_DETECTION_LIST_ARRAYS,size,buf);
-
+  uint16_t segmentNumber[8];
+  uint16_t flag[8];
   // Check the CRC16
   if(check > 0){
     return check;
@@ -326,10 +335,24 @@ uint8_t LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitude
         bufAmplitude[l] = bufSegment[k];
         l++;
       }
-
+	  
+	  uint8_t bufSegmentNumber[2];
+      l = 0;
+      for (int k = 8; k < 10; k++) {
+        bufSegmentNumber[l] = bufSegment[k];
+        l++;
+      }
+	  uint8_t bufFlags[2];
+      l = 0;
+      for (int k = 10; k < 12; k++) {
+        bufFlags[l] = bufSegment[k];
+        l++;
+      }
       // Combine the bytes to a 32-bit number
       distances[i] = combineBytes(bufDistance,4);
       amplitudes[i] = combineBytes(bufAmplitude,4);
+	  segmentNumber[i] = combineBytes(bufSegmentNumber,2)+1;
+	  flag[i] = combineBytes(bufFlags,2);
 
       #if (LEDDAR_DEBUG == 1)
       for (int j = i * 12; j < (i + 1) * 12; j++) {
@@ -338,7 +361,11 @@ uint8_t LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitude
       Serial.print("\t");
       Serial.print(distances[i], DEC);
       Serial.print("\t");
-      Serial.println(amplitudes[i], DEC);
+      Serial.print(amplitudes[i], DEC);
+	  Serial.print("\t");
+      Serial.print(segmentNumber[i], DEC);
+	  Serial.print("\t");
+      Serial.println(flag[i], DEC);
       #endif
     }
     return 0;
@@ -1385,7 +1412,7 @@ void LeddarVu8Arduino::spiBegin(uint8_t csPin){
   m_csPin = csPin;
   digitalWrite(csPin, HIGH);
   pinMode(csPin, OUTPUT);
-  SPI.begin();
+  LeddarVu8SPI.begin();
 }
 /** Save SPISettings.
 *
@@ -1398,20 +1425,20 @@ void LeddarVu8Arduino::spiSetSpiSettings(SPISettings spiSettings){
 *
 */
 void LeddarVu8Arduino::spiActivate(){
-  SPI.beginTransaction(m_spiSettings);
+  LeddarVu8SPI.beginTransaction(m_spiSettings);
 }
 /** Deactivate SPI hardware.
 *
 */
 void LeddarVu8Arduino::spiDeactivate(){
-  SPI.endTransaction();
+  LeddarVu8SPI.endTransaction();
 }
 /** Receive a byte.
 *
 * \return The byte.
 */
 uint8_t LeddarVu8Arduino::spiReceive(){
-  return SPI.transfer(0XFF);
+  return LeddarVu8SPI.transfer(0XFF);
 }
 /** Receive multiple bytes.
 *
@@ -1422,7 +1449,7 @@ uint8_t LeddarVu8Arduino::spiReceive(){
 */
 uint8_t LeddarVu8Arduino::spiReceive(uint8_t* buf, size_t n){
   for (size_t i = 0; i < n; i++) {
-    buf[i] = SPI.transfer(0XFF);
+    buf[i] = LeddarVu8SPI.transfer(0XFF);
   }
   return 0;
 }
@@ -1431,7 +1458,7 @@ uint8_t LeddarVu8Arduino::spiReceive(uint8_t* buf, size_t n){
 * \param[in] data Byte to send
 */
 void LeddarVu8Arduino::spiSend(uint8_t data){
-  SPI.transfer(data);
+  LeddarVu8SPI.transfer(data);
 }
 /** Send multiple bytes.
 *
@@ -1440,7 +1467,7 @@ void LeddarVu8Arduino::spiSend(uint8_t data){
 */
 void LeddarVu8Arduino::spiSend(const uint8_t* buf, size_t n){
   for (size_t i = 0; i < n; i++) {
-    SPI.transfer(buf[i]);
+    LeddarVu8SPI.transfer(buf[i]);
   }
 }
 /** Set CS low.
