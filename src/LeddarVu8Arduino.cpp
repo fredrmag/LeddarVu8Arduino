@@ -10,6 +10,7 @@
 #include "Arduino.h"
 #include "LeddarVu8Arduino.h"
 #include "CRC16.h"
+#include <SPI.h>
 
 //-----------------------------------------------------------------------------
 /** Initialize the LeddarVu8 sensor.
@@ -335,7 +336,7 @@ uint8_t LeddarVu8Arduino::readRawEchoes(uint32_t* distances, uint32_t* amplitude
         bufAmplitude[l] = bufSegment[k];
         l++;
       }
-	  
+
 	  uint8_t bufSegmentNumber[2];
       l = 0;
       for (int k = 8; k < 10; k++) {
@@ -1398,7 +1399,7 @@ void LeddarVu8Arduino::spiStart(){
 void LeddarVu8Arduino::spiStop() {
   if (m_spiActive) {
     spiUnselect();
-    spiSend(0XFF);
+    //spiSend(0XFF);
     spiDeactivate();
     m_spiActive = false;
   }
@@ -1438,7 +1439,7 @@ void LeddarVu8Arduino::spiDeactivate(){
 * \return The byte.
 */
 uint8_t LeddarVu8Arduino::spiReceive(){
-  return LeddarVu8SPI.transfer(0XFF);
+  return LeddarVu8SPI.transfer(0xFF);
 }
 /** Receive multiple bytes.
 *
@@ -1449,7 +1450,7 @@ uint8_t LeddarVu8Arduino::spiReceive(){
 */
 uint8_t LeddarVu8Arduino::spiReceive(uint8_t* buf, size_t n){
   for (size_t i = 0; i < n; i++) {
-    buf[i] = LeddarVu8SPI.transfer(0XFF);
+    buf[i] = LeddarVu8SPI.transfer(0xFF);
   }
   return 0;
 }
