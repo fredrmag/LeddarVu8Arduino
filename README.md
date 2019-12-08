@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LeddarVu8Arduino class
 
 ## Introduction
@@ -26,3 +27,7 @@ Library for the [Leddar Vu8 LiDAR sensor](https://leddartech.com/modules/leddarv
 ## Credit - 3rd party software used
 * The SPI functions are modified from the Arduino SD-card library [SdFat](https://github.com/greiman/SdFat) written by William Greiman, and is under the [GNU General Public License](http://www.gnu.org/licenses/) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 * The CRC16 checking (CRC16.h) is taken from the [ArduinoLeddar](http://share.leddartech.com/ArduinoLeddar.zip) library written by LeddarTech, and is under the [MIT licence](https://opensource.org/licenses/mit-license.html).
+=======
+# LeddarVu8Arduino
+Arduino driver for Leddar Vu8
+>>>>>>> 7a70d8df2f503f7c832e5c60d3050b48cb70e694
